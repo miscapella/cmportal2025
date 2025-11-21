@@ -1,0 +1,102 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-07-16 13:34:48
+         compiled from "ui\theme\softhash\prog\INV-CGT\list-komponen.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:133750085166961263483154-15602489%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '4072535272fb7e9166c1837cdfc92d827a1ed400' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\INV-CGT\\list-komponen.tpl',
+      1 => 1721111562,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '133750085166961263483154-15602489',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_669612634beeb1_95037843',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'id_inventaris' => 0,
+    '_url' => 0,
+    'nama_inventaris' => 0,
+    'id_item' => 0,
+    'nama_item' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_669612634beeb1_95037843')) {function content_669612634beeb1_95037843($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+ <?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+  <button class="close" data-dismiss="alert">×</button>
+  <i class="fa-fw fa fa-check"></i>
+  <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<input type="hidden" id="id_inventaris" value="<?php echo $_smarty_tpl->tpl_vars['id_inventaris']->value;?>
+" />
+<div class="row">
+  <div class="col-md-9">
+    <div class="hexagon-container">
+      <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+inventaris/list/" class="hexagon">Inventaris</a>
+    </div>
+    <div class="hexagon-container4" style="margin-left: -15px">
+      <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+inventaris/detail/<?php echo $_smarty_tpl->tpl_vars['id_inventaris']->value;?>
+/" class="hexagon4"
+        ><?php echo $_smarty_tpl->tpl_vars['nama_inventaris']->value;?>
+</a
+      >
+    </div>
+    <div class="hexagon-container2" style="margin-left: -15px">
+      <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+inventaris/detail-item/<?php echo $_smarty_tpl->tpl_vars['id_inventaris']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['id_item']->value;?>
+/" class="hexagon2"
+        ><?php echo $_smarty_tpl->tpl_vars['nama_item']->value;?>
+</a
+      >
+    </div>
+  </div>
+  <div class="col-md-3">
+    <a
+      href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+inventaris/additem/<?php echo $_smarty_tpl->tpl_vars['id_inventaris']->value;?>
+"
+      class="btn btn-success btn-block"
+      ><i class="fa fa-plus"></i> Tambah Item</a
+    >
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="card-body panel-body">
+        <table
+          id="datatable"
+          class="table table-bordered table-hover sys_table"
+        >
+          <thead>
+            <tr>
+              <th width="3%">#</th>
+              <th width="20%">Kode Komponen</th>
+              <th width="25%">Nama Komponen</th>
+              <th width="20%" class="text-right"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Manage'];?>
+</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>

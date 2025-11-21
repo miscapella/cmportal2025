@@ -1,0 +1,148 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-13 15:53:43
+         compiled from "ui\theme\softhash\prog\HRD\detail-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:305415023666ab260e3b8c0-15376703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e00d2d6285719df3211fb8dc25d6ff9312fcbcdd' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\detail-organisasi.tpl',
+      1 => 1718268822,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '305415023666ab260e3b8c0-15376703',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_666ab260ea2452_30814539',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'd' => 0,
+    '_url' => 0,
+    'idate' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_666ab260ea2452_30814539')) {function content_666ab260ea2452_30814539($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body <?php if ($_smarty_tpl->tpl_vars['d']->value['priority']=='URGENT'){?>red-bg<?php }else{ ?>blue-bg<?php }?>">
+			    <div class="col-lg-6"><h3>DETAIL ORGANISASI</h3></div>
+			    <div class="col-lg-6" style="text-align: right"><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+struktur-organisasi/list/" class="btn btn-primary btn-sm">Back</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body detail-pr-head">
+				<div class="form-group"><label class="col-lg-3 control-label" for="no_spmk">No. SPmK</label>
+					<div class="col-lg-9"><input type="text" id="no_spmk" name="no_spmk" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['no_spmk'];?>
+" disabled></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="tgl_spmk">Tanggal SPmK</label>
+					<div class="col-lg-9"><input type="text" id="idate" name="idate" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['idate']->value;?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="priority">Tingkat Kepentingan</label>
+					<div class="col-lg-9"><input type="text" id="priority" name="priority" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['priority'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="status">Status</label>
+					<div class="col-lg-9"><input type="text" id="status" name="status" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['status'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="pesan">Pesan</label>
+					<div class="col-lg-9"><textarea type="text" id="pesan" name="pesan" class="form-control" rows="5"><?php echo $_smarty_tpl->tpl_vars['d']->value['pesan'];?>
+</textarea>
+					</div>
+				</div><br><br><br><br><br>
+				<?php if ($_smarty_tpl->tpl_vars['d']->value['diperiksa_nama']!=''){?>
+				<div class="form-group"><label class="col-lg-3 control-label" for="diperiksa">Diperiksa Oleh</label>
+					<div class="col-lg-5"><input type="text" id="diperiksa" name="diperiksa" class="form-control" value="<?php if ($_smarty_tpl->tpl_vars['d']->value['diperiksa_nama']!=''){?><?php echo $_smarty_tpl->tpl_vars['d']->value['diperiksa_nama'];?>
+<?php }else{ ?>Menunggu Approval<?php }?>" disabled></div>
+                    <label class="col-lg-2 control-label text-right" for="tgldiperiksa">Tanggal Diperiksa</label>
+                    <div class="col-lg-2"><input type="text" id="tgldiperiksa" name="tgldiperiksa" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['diperiksa_tgl'];?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<?php }?>
+				<?php if ($_smarty_tpl->tpl_vars['d']->value['disetujui_nama']!=''){?>
+				<div class="form-group"><label class="col-lg-3 control-label" for="disetujui">Disetujui Oleh</label>
+					<div class="col-lg-5"><input type="text" id="disetujui" name="disetujui" class="form-control" value="<?php if ($_smarty_tpl->tpl_vars['d']->value['disetujui_nama']!=''){?><?php echo $_smarty_tpl->tpl_vars['d']->value['disetujui_nama'];?>
+<?php }else{ ?>Menunggu Approval<?php }?>" disabled></div>
+                    <label class="col-lg-2 control-label text-right" for="tgldisetujui">Tanggal Disetujui</label>
+                    <div class="col-lg-2"><input type="text" id="tgldisetujui" name="tgldisetujui" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['disetujui_tgl'];?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<?php }?>
+                <?php if ($_smarty_tpl->tpl_vars['d']->value['disurvey_nama']!=''){?>
+				<div class="form-group"><label class="col-lg-3 control-label" for="disurvey">Disurvey Oleh</label>
+					<div class="col-lg-5"><input type="text" id="disurvey" name="disurvey" class="form-control" value="<?php if ($_smarty_tpl->tpl_vars['d']->value['disurvey_nama']!=''){?><?php echo $_smarty_tpl->tpl_vars['d']->value['disurvey_nama'];?>
+<?php }else{ ?>Menunggu Approval<?php }?>" disabled></div>
+                    <label class="col-lg-2 control-label text-right" for="tgldisurvey">Tanggal Disurvey</label>
+                    <div class="col-lg-2"><input type="text" id="tgldisurvey" name="tgldisurvey" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['disurvey_tgl'];?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<?php }?>
+				<?php if ($_smarty_tpl->tpl_vars['d']->value['diketahui_nama']!=''){?>
+				<div class="form-group"><label class="col-lg-3 control-label" for="diketahui">Diketahui Oleh</label>
+					<div class="col-lg-5"><input type="text" id="diketahui" name="diketahui" class="form-control" value="<?php if ($_smarty_tpl->tpl_vars['d']->value['diketahui_nama']!=''){?><?php echo $_smarty_tpl->tpl_vars['d']->value['diketahui_nama'];?>
+<?php }else{ ?>Menunggu Approval<?php }?>" disabled></div>
+                    <label class="col-lg-2 control-label text-right" for="tgldiketahui">Tanggal Diketahui</label>
+                    <div class="col-lg-2"><input type="text" id="tgldiketahui" name="tgldiketahui" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['diketahui_tgl'];?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<?php }?>
+				<?php if ($_smarty_tpl->tpl_vars['d']->value['ditolak_nama']!=''){?>
+				<div class="form-group"><label class="col-lg-3 control-label" for="ditolak">Ditolak Oleh</label>
+					<div class="col-lg-5"><input type="text" id="ditolak" name="ditolak" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['ditolak_nama'];?>
+" disabled></div>
+                    <label class="col-lg-2 control-label text-right" for="tglditolak">Tanggal Ditolak</label>
+                    <div class="col-lg-2"><input type="text" id="tglditolak" name="tglditolak" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['ditolak_tgl'];?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<?php }?>
+                <div class="form-group"><label class="col-lg-3 control-label">Approval</label>
+					<div class="col-lg-9" style="margin-top: 5px;">
+					    <a class="btn btn-primary btn-xs" id="approve">APPROVE</a>
+					    <a class="btn btn-danger btn-xs" id="reject">REJECT</a>
+					</div>
+				</div><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

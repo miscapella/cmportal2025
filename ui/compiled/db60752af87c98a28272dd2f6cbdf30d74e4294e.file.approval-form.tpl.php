@@ -1,0 +1,210 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-06-08 14:41:04
+         compiled from "ui\theme\softhash\prog\FORM\approval-form.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1933247770648038f8126042-92028915%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'db60752af87c98a28272dd2f6cbdf30d74e4294e' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\FORM\\approval-form.tpl',
+      1 => 1686210018,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1933247770648038f8126042-92028915',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_648038f81e4a99_87135981',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    'd' => 0,
+    'kondisi' => 0,
+    'opt' => 0,
+    'esize' => 0,
+    'e' => 0,
+    'ds' => 0,
+    'current' => 0,
+    'tg' => 0,
+    'tgs' => 0,
+    'f' => 0,
+    'fs' => 0,
+    'foo' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_648038f81e4a99_87135981')) {function content_648038f81e4a99_87135981($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>FORM APPROVAL</h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+form/list/" class="btn btn-primary btn-sm"><i class="fa fa-reply"></i> Back</a>
+				</div>
+                <ul style="padding: 0;list-style-type:none">
+                   <li>Kode Form : <b><?php echo $_smarty_tpl->tpl_vars['d']->value['kode_form'];?>
+</b></li>
+                   <li>Nama Form : <b><?php echo $_smarty_tpl->tpl_vars['d']->value['nama_form'];?>
+</b></li>
+                   <li>&nbsp;</li>
+                   <li><button class="btn btn-success btn-sm" name="add" id="addLevel"><i class="fa fa-plus"></i> Tambah Level</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger btn-sm" name="save" id="save">Simpan</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body level" style="overflow:auto;white-space:nowrap;">
+				<input type="hidden" name="kode_form" id="kode_form" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kode_form'];?>
+">
+				<div style="display:none" name="kondisi" id="kondisi"><?php echo $_smarty_tpl->tpl_vars['kondisi']->value;?>
+</div>
+				<div style="display:none" name="opt" id="opt"><?php echo $_smarty_tpl->tpl_vars['opt']->value;?>
+</div>
+				<?php if ($_smarty_tpl->tpl_vars['esize']->value!=0){?>
+				<?php $_smarty_tpl->tpl_vars["current"] = new Smarty_variable(1, null, 0);?>
+				<?php }else{ ?>
+				<?php $_smarty_tpl->tpl_vars["current"] = new Smarty_variable(0, null, 0);?>
+				<?php }?>				
+				<?php  $_smarty_tpl->tpl_vars['ds'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ds']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['e']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ds']->key => $_smarty_tpl->tpl_vars['ds']->value){
+$_smarty_tpl->tpl_vars['ds']->_loop = true;
+?>
+				<?php if ($_smarty_tpl->tpl_vars['ds']->value['urutan']==$_smarty_tpl->tpl_vars['current']->value+1){?>
+					</tbody>
+				</table>
+				<?php $_smarty_tpl->tpl_vars["current"] = new Smarty_variable($_smarty_tpl->tpl_vars['current']->value+1, null, 0);?>
+				<?php }?>
+				<?php if ($_smarty_tpl->tpl_vars['ds']->value['urutan']==$_smarty_tpl->tpl_vars['current']->value){?>
+				<table class="table table-bordered table-hover sys_table" id="isi_case<?php echo floor($_smarty_tpl->tpl_vars['ds']->value['urutan']);?>
+">
+					<thead>
+					<tr>
+						<th style="width: 5%; text-align: center;">Level</th>
+						<th style="width: 35%; text-align: center;">Kondisi</th>
+						<th style="width: 25%; text-align: center;">Value</th>
+						<th style="width: 25%; text-align: center;">Approval</th>
+						<th class="width: 10%; text-right">Manage</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr><td style="text-align:center"><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none"><?php echo $_smarty_tpl->tpl_vars['current']->value;?>
+</td>
+							<td style="display:none"><input type="number" id="case_number" name="case_number[]" class="form-control" value='<?php echo $_smarty_tpl->tpl_vars['current']->value;?>
+'></td>
+							<td><select name="condition[]" class="condition" id="condition"><option value="default">Default</option></select></td>
+							<td><select name="value[]" class="value" id="value"><option value="default">Default</option></select></td>
+							<td><select name="target[]" class="target" id="target">
+								<option value="">Pilih Target</option>
+								<option value="manager" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kepada']=='manager'){?>selected<?php }?>>Atasan Langsung</option>
+								<option value="supervisor" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kepada']=='supervisor'){?>selected<?php }?>>Atasan Langsung Berikutnya</option>
+								<?php  $_smarty_tpl->tpl_vars['tgs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tgs']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['tgs']->key => $_smarty_tpl->tpl_vars['tgs']->value){
+$_smarty_tpl->tpl_vars['tgs']->_loop = true;
+?>
+									<option value="<?php echo $_smarty_tpl->tpl_vars['tgs']->value['username'];?>
+" <?php if ($_smarty_tpl->tpl_vars['tgs']->value['username']==$_smarty_tpl->tpl_vars['ds']->value['kepada']){?>selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['tgs']->value['username'];?>
+</option>
+								<?php } ?>
+							</select></td>
+							<td class="text-right"><button type="button" class="btn addCase btn-primary btn-sm" id="case<?php echo floor($_smarty_tpl->tpl_vars['ds']->value['urutan']);?>
+"><i class="fa fa-plus"></i> Tambah Case</button> <button type="button" class="btn btn-danger hapus_level btn-sm"><i class="fa fa-trash"></i> Hapus</button></td>
+						</tr>
+				<?php }else{ ?>
+						<tr><td style="text-align:center"><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none">Case</td>
+							<td style="display:none"><input type="number" id="case_number" name="case_number[]" class="form-control" value='<?php echo $_smarty_tpl->tpl_vars['current']->value;?>
+'></td>
+							<td>
+								<select name="condition[]" class="condition" id="condition">
+									<option value="">Pilih Kondisi</option>
+									<option value="golongan" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kondisi']=='golongan'){?>selected<?php }?>>Tingkatan</option>
+									<?php  $_smarty_tpl->tpl_vars['fs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['fs']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['f']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['fs']->key => $_smarty_tpl->tpl_vars['fs']->value){
+$_smarty_tpl->tpl_vars['fs']->_loop = true;
+?>
+									<option value="<?php echo $_smarty_tpl->tpl_vars['fs']->value['section'];?>
+" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kondisi']==$_smarty_tpl->tpl_vars['fs']->value['section']){?>selected<?php }?>>Section <?php echo floor($_smarty_tpl->tpl_vars['fs']->value['section']);?>
+ - <?php echo $_smarty_tpl->tpl_vars['fs']->value['pertanyaan'];?>
+</option>
+									<?php } ?>
+								</select>
+							</td>
+							<td>
+								<select name="value[]" class="value" id="value">
+									<option value="">Pilih Value</option>
+									<option value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['value'];?>
+" selected><?php echo $_smarty_tpl->tpl_vars['ds']->value['value'];?>
+</option>
+								</select>
+							</td>
+							<td><select name="target[]" class="target" id="target">
+								<option value="">Pilih Target</option>
+								<?php $_smarty_tpl->tpl_vars['foo'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['foo']->step = 1;$_smarty_tpl->tpl_vars['foo']->total = (int)ceil(($_smarty_tpl->tpl_vars['foo']->step > 0 ? 10+1 - (1) : 1-(10)+1)/abs($_smarty_tpl->tpl_vars['foo']->step));
+if ($_smarty_tpl->tpl_vars['foo']->total > 0){
+for ($_smarty_tpl->tpl_vars['foo']->value = 1, $_smarty_tpl->tpl_vars['foo']->iteration = 1;$_smarty_tpl->tpl_vars['foo']->iteration <= $_smarty_tpl->tpl_vars['foo']->total;$_smarty_tpl->tpl_vars['foo']->value += $_smarty_tpl->tpl_vars['foo']->step, $_smarty_tpl->tpl_vars['foo']->iteration++){
+$_smarty_tpl->tpl_vars['foo']->first = $_smarty_tpl->tpl_vars['foo']->iteration == 1;$_smarty_tpl->tpl_vars['foo']->last = $_smarty_tpl->tpl_vars['foo']->iteration == $_smarty_tpl->tpl_vars['foo']->total;?>
+								<option value="<?php echo $_smarty_tpl->tpl_vars['foo']->value;?>
+" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kepada']==$_smarty_tpl->tpl_vars['foo']->value){?>selected<?php }?>>Approval Level <?php echo $_smarty_tpl->tpl_vars['foo']->value;?>
+</option>
+								<?php }} ?>
+								<option value="manager" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kepada']=='manager'){?>selected<?php }?>>Atasan Langsung</option>
+								<option value="supervisor" <?php if ($_smarty_tpl->tpl_vars['ds']->value['kepada']=='supervisor'){?>selected<?php }?>>Atasan Langsung Berikutnya</option>
+								<?php  $_smarty_tpl->tpl_vars['tgs'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tgs']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['tgs']->key => $_smarty_tpl->tpl_vars['tgs']->value){
+$_smarty_tpl->tpl_vars['tgs']->_loop = true;
+?>
+									<option value="<?php echo $_smarty_tpl->tpl_vars['tgs']->value['username'];?>
+" <?php if ($_smarty_tpl->tpl_vars['tgs']->value['username']==$_smarty_tpl->tpl_vars['ds']->value['kepada']){?>selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['tgs']->value['username'];?>
+</option>
+								<?php } ?>
+							</select></td>
+							<td class="text-right"><button type="button" class="btn btn-danger hapus_level btn-sm"><i class="fa fa-trash"></i> Hapus</button></td>
+						</tr>
+				<?php }?>
+				<?php } ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="number" name="level_number" id="level_number" style="display:none" value=<?php echo $_smarty_tpl->tpl_vars['current']->value;?>
+>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>

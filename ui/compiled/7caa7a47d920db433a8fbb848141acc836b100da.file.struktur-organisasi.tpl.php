@@ -1,0 +1,55 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-12 13:29:08
+         compiled from "ui\theme\softhash\prog\HRD\struktur-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:139054592566694034302e76-80655120%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '7caa7a47d920db433a8fbb848141acc836b100da' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\struktur-organisasi.tpl',
+      1 => 1718173745,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '139054592566694034302e76-80655120',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_666940343524f6_91949392',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_666940343524f6_91949392')) {function content_666940343524f6_91949392($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+	<div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+		<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+struktur-organisasi/add/" class="btn btn-success btn-block"><i class="fa fa-plus"></i>  Tambah Organisasi</a>			
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="just-padding">
+        </div>
+	</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

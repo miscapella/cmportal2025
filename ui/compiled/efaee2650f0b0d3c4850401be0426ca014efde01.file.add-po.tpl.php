@@ -1,0 +1,163 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2025-01-13 14:38:01
+         compiled from "ui\theme\softhash\prog\GAS\add-po.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1423120885642cf7c6620fa3-78967877%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'efaee2650f0b0d3c4850401be0426ca014efde01' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\add-po.tpl',
+      1 => 1736753880,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1423120885642cf7c6620fa3-78967877',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_642cf7c666f0b3_79713266',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    'idate' => 0,
+    'opt_supplier' => 0,
+    'd' => 0,
+    'clist' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_642cf7c666f0b3_79713266')) {function content_642cf7c666f0b3_79713266($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>TAMBAH PURCHASE ORDER</h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+<!--
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/list-pr/" class="btn btn-primary btn-sm">Daftar PR</a>
+				</div>
+-->
+                <ul style="padding: 0;list-style-type:none">
+                   <li><button class="btn btn-danger btn-sm" name="save" id="save">Simpan</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="form-group"><label class="col-lg-3 control-label" for="tgl_pr">Tanggal PO</label>
+					<div class="col-lg-9"><input type="text" id="idate" name="idate" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['idate']->value;?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="supplier">Supplier <span style="color: red;">*</span></label>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="supplier" name="supplier">
+                            <?php echo $_smarty_tpl->tpl_vars['opt_supplier']->value;?>
+
+                        </select>
+                    </div>
+                </div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="priority">Tingkat Kepentingan <span style="color: red;">*</span> </label>
+					<div class="col-lg-9">
+						<select name="priority" id="priority" class="form-control">
+							<option value="">Pilih Kepentingan</option>
+							<option value="RENDAH">RENDAH</option>
+							<option value="MENENGAH">MENENGAH</option>
+							<option value="TINGGI">TINGGI</option>
+						</select>
+					</div>
+				</div><br>
+				<!-- <div class="form-group"><label class="col-lg-3 control-label" for="ppn">Ppn <span style="color: red;">*</span></label>
+					<div class="col-lg-9"><input type="number" id="ppn" name="ppn" class="form-control" value="0"></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="exclude_ppn">Exclude Ppn</label>
+					<div class="col-lg-9"><input type="checkbox" id="exclude_ppn" name="exclude_ppn" style="vertical-align: middle;"></div>
+				</div><br> -->
+				<div class="form-group"><label class="col-lg-3 control-label" for="bayar_pusat">Bayar di pusat </label>
+					<div class="col-lg-9"><input type="checkbox" id="bayar_pusat" name="bayar_pusat" style="vertical-align: middle;"></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="lokasi_pengiriman">Lokasi Pengiriman</label>
+					<div class="col-lg-9"><input type="text" id="lokasi_pengiriman" name="lokasi_pengiriman" class="form-control"></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="syarat_pembayaran">Syarat Pembayaran</label>
+					<div class="col-lg-9"><input type="text" id="syarat_pembayaran" name="syarat_pembayaran" class="form-control"></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="catatan">Catatan</label>
+					<div class="col-lg-9"><input type="text" id="catatan" name="catatan" class="form-control"></div>
+				</div><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+				<input type="hidden" name="kd_inventaris" id="kd_inventaris" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kd_inventaris'];?>
+">
+				<div class="form-group">
+					<label class="col-lg-2 control-label" for="total">Harga Total</label>
+					<div class="col-lg-3">
+						<input type="text" id="total" name="total" class="form-control" style="background-color: #f7f7f7; cursor: default;" value="Rp 0" disabled>
+					</div><br>
+				</div>
+			</div>
+			<div class="panel-body" style="overflow:auto;white-space:nowrap;">
+                <form class="form-horizontal" id="rform">
+					<table class="table table-bordered table-hover sys_table" id="table-po">
+						<thead>
+						<tr>
+							<th style="width:3%">#</th>
+							<th style="width:13%">No. PR</th>
+							<th style="width:17%">Nama Barang</th>
+							<th style="width:10%">Harga</th>
+							<th style="width:5%">PPN</th>
+							<th style="width:10%">Harga Setelah PPN</th>
+							<th style="width:10%"><span style="color: red;">*</span> Quantity</th>
+							<!-- <th style="width:14%" colspan="2">Garansi</th> -->
+							<th style="width:32%">Keterangan</th>
+						</tr>
+						</thead>
+						<tbody class="sys_tables">
+						<div style="display:none" name="opt" id="opt"><?php echo $_smarty_tpl->tpl_vars['clist']->value;?>
+</div>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

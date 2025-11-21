@@ -1,0 +1,91 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-08-27 11:03:50
+         compiled from "ui\theme\softhash\prog\GAS\list-ur-aprv.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:39016183366ac7eb01994f5-83291730%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8312794579fcf748f80e61e185d4e5d66be879f8' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\list-ur-aprv.tpl',
+      1 => 1724731429,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '39016183366ac7eb01994f5-83291730',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_66ac7eb01f7de4_04073834',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'test' => 0,
+    'atasan' => 0,
+    'user' => 0,
+    'ga_admin' => 0,
+    '_L' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_66ac7eb01f7de4_04073834')) {function content_66ac7eb01f7de4_04073834($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<h1><?php echo $_smarty_tpl->tpl_vars['test']->value;?>
+</h1>
+<?php if ($_smarty_tpl->tpl_vars['atasan']->value==$_smarty_tpl->tpl_vars['user']->value["username"]||$_smarty_tpl->tpl_vars['user']->value["user_type"]=="Admin"||$_smarty_tpl->tpl_vars['ga_admin']->value){?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2>UR Menunggu Approval</h2>
+                <table id="list-minta-barang-master" class="table table-bordered table-hover sys_table">
+                    <thead>
+                    <tr>
+                        <th style="width: 2%">#</th>
+                        <th style="width: 18%">No. UR</th>
+                        <th style="width: 15%">Tgl UR</th>
+						<th style="width: 20%">Dibuat Oleh</th>
+                        <th style="width: 15%">Approval</th>
+                        <th class="text-right" style="width: 20%"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Manage'];?>
+</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>
+</div>
+<?php }else{ ?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2>Tidak ada User Request untuk di approve</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<?php }?>
+
+
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

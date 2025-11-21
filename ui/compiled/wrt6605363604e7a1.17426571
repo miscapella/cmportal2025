@@ -1,0 +1,79 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-03-28 16:19:49
+         compiled from "ui\theme\softhash\prog\KEBUN\list-spmk-approved.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:315153847651e63f79f07a2-67160696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '2ca8550be35db59ec507e398e4a0ddc0fe8c2b84' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\KEBUN\\list-spmk-approved.tpl',
+      1 => 1711617586,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '315153847651e63f79f07a2-67160696',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_651e63f7a41e70_00356120',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'user' => 0,
+    'approve' => 0,
+    '_L' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_651e63f7a41e70_00356120')) {function content_651e63f7a41e70_00356120($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<h1><?php echo $_smarty_tpl->tpl_vars['user']->value;?>
+</h1>
+<h2><?php echo $_smarty_tpl->tpl_vars['approve']->value;?>
+</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+               <h2>SURAT PERMINTAAN KERJA</h2>
+                <table id="datatableapproved" class="table table-bordered table-hover sys_table">
+                    <thead>
+                    <tr>
+                        <th style="width: 2%">#</th>
+                        <th style="width: 15%">Tgl SPmK</th>
+                        <th style="width: 13%">No. SPmK</th>
+						<th style="width: 15%">Dibuat Oleh</th>
+                        <th style="width: 15%">Tingkat Kepentingan</th>
+                        <th style="width: 15%">Status</th>
+                        <th class="text-right" style="width: 25%"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Manage'];?>
+</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

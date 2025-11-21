@@ -1,0 +1,316 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-04 09:12:09
+         compiled from "ui\theme\softhash\prog\HRD\add-karyawan.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:946739872665d92ef066878-82562454%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'dec82ac03aa93e68e1fd147511c405a8026b5b2e' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\add-karyawan.tpl',
+      1 => 1717467127,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '946739872665d92ef066878-82562454',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_665d92ef09a404_94832486',
+  'variables' => 
+  array (
+    '_url' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_665d92ef09a404_94832486')) {function content_665d92ef09a404_94832486($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+karyawan/list/" class="btn btn-primary btn-xs">Daftar Karyawan</a>
+				</div>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <div class="alert alert-danger" id="emsg">
+                    <span id="emsgbody"></span>
+                </div>
+                <form class="form-horizontal" id="rformsupplier">
+                    <div class="col-lg-12"><h1 class="text-center">New Employee Wizard</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_id"> Employee Id</label>
+                        <div class="col-lg-9"><input type="text" id="employee_id" name="employee_id" class="form-control" placeholder="Employee Id" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_name"> Employee Name</label>
+                        <div class="col-lg-9"><input type="text" id="employee_name" name="employee_name" class="form-control" placeholder="Employee Name" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="first_name"><span style="color: red;">*</span> First Name</label>
+                        <div class="col-lg-9"><input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="middle_name"> Middle Name</label>
+                      <div class="col-lg-9"><input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Middle Name">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="last_name"> Last Name</label>
+                      <div class="col-lg-9"><input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name">
+                      </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Personal Info</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="person_id"> Person Id</label>
+                      <div class="col-lg-9"><input type="text" id="person_id" name="person_id" class="form-control" placeholder="Person Id" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="picture"> Picture</label>
+                      <div class="col-lg-9"><input type="text" id="picture" name="picture" class="form-control" placeholder="Picture" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="user_id"><span style="color: red;">*</span> User Id</label>
+                      <div class="col-lg-9"><input type="text" id="user_id" name="user_id" class="form-control" placeholder="User Id">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="role_group_id"><span style="color: red;">*</span> Role Group Id</label>
+                      <div class="col-lg-9"><input type="text" id="role_group_id" name="role_group_id" class="form-control" placeholder="Role Group Id">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="place_of_birth"><span style="color: red;">*</span> Place of Birth</label>
+                      <div class="col-lg-9"><input type="text" id="place_of_birth" name="place_of_birth" class="form-control" placeholder="Place of Birth">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="date_of_birth"><span style="color: red;">*</span> Date of Birth</label>
+                      <div class="col-lg-9"><input type="text" id="date_of_birth" name="date_of_birth" class="form-control" placeholder="Date of Birth">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="gender"><span style="color: red;">*</span> Gender</label>
+                        <div class="col-lg-9"><select class="form-control kodetelp" id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="marital"><span style="color: red;">*</span> Marital Status</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="marital" name="marital">
+                      <option value="single">Single</option>
+                      <option value="menikah">Menikah</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="religion"><span style="color: red;">*</span> Religion</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="religion" name="religion">
+                      <option value="islam">Islam</option>
+                      <option value="kristen">Kristen</option>
+                      <option value="buddha">Buddha</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="blood_type"> Blood Type</label>
+                      <div class="col-lg-9"><input type="text" id="blood_type" name="blood_type" class="form-control" placeholder="Blood Type">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="citizenship"> Citizenship</label>
+                      <div class="col-lg-9"><input type="text" id="citizenship" name="citizenship" class="form-control" placeholder="Citizenship">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="mobile_number"> Mobile Number</label>
+                      <div class="col-lg-9"><input type="text" id="mobile_number" name="mobile_number" class="form-control" placeholder="Mobile Number">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="email"> Email</label>
+                      <div class="col-lg-9"><input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="social_insurance_no"> Social Insurance No</label>
+                      <div class="col-lg-9"><input type="text" id="social_insurance_no" name="social_insurance_no" class="form-control" placeholder="Social Insurance No">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="social_insurance_join_date"> Social Insurance Join Date</label>
+                      <div class="col-lg-9"><input type="text" id="social_insurance_join_date" name="social_insurance_join_date" class="form-control" placeholder="Social Insurance Join Date">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bpjs_kesehatan_no"> BPJS Kesehatan No</label>
+                      <div class="col-lg-9"><input type="text" id="bpjs_kesehatan_no" name="bpjs_kesehatan_no" class="form-control" placeholder="BPJS Kesehatan No">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bpjs_kesehatan_join_date"> BPJS Kesehatan Join Date</label>
+                      <div class="col-lg-9"><input type="text" id="bpjs_kesehatan_join_date" name="bpjs_kesehatan_join_date" class="form-control" placeholder="BPJS Kesehatan Join Date">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="faskes_code"> Faskes Code</label>
+                      <div class="col-lg-9"><input type="text" id="faskes_code" name="faskes_code" class="form-control" placeholder="Faskes Code">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="faskes_name"> Faskes Name</label>
+                      <div class="col-lg-9"><input type="text" id="faskes_name" name="faskes_name" class="form-control" placeholder="Faskes Name">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kelas_rawat"> Kelas Rawat</label>
+                      <div class="col-lg-9"><input type="text" id="kelas_rawat" name="kelas_rawat" class="form-control" placeholder="Kelas Rawat">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tk_code"> TK Code</label>
+                      <div class="col-lg-9"><input type="text" id="tk_code" name="tk_code" class="form-control" placeholder="TK Code">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="willingness_to_travel"> Willingness to Travel</label>
+                      <div class="col-lg-9"><input type="checkbox" id="willingness_to_travel" name="willingness_to_travel">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="entried_date"> Entried Date</label>
+                      <div class="col-lg-9"><input type="date" id="entried_date" name="entried_date" class="form-control" placeholder="Entried Date">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="entried_by"> Entried By</label>
+                      <div class="col-lg-9"><input type="text" id="entried_by" name="entried_by" class="form-control" placeholder="Entried By">
+                      </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Working Info</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_company_id"><span style="color: red;">*</span> Supervisor Company Id</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_company_id" name="supervisor_company_id" class="form-control" placeholder="Supervisor Company Id">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_id"><span style="color: red;">*</span> Supervisor Id</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_id" name="supervisor_id" class="form-control" placeholder="Supervisor Id">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_name"> Supervisor Name</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_name" name="supervisor_name" class="form-control" placeholder="Supervisor Name" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_category"> Employee Category</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_category" name="employee_category">
+                      <option value=""></option>
+                      <option value="kategori1">Kategori 1</option>
+                      <option value="kategori2">Kategori 2</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_status"><span style="color: red;">*</span> Employee Status</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_status" name="employee_status">
+                      <option value="active">Active</option>
+                      <option value="inactive">Inactive</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="probation"> Probation (Months)</label>
+                      <div class="col-lg-9"><input type="text" id="probation" name="probation" class="form-control" placeholder="Probation">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_type"><span style="color: red;">*</span> Employee Type</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_type" name="employee_type">
+                      <option value="permanent">Permanent</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="remuneration"><span style="color: red;">*</span> Remuneration Type</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="remuneration" name="remuneration">
+                      <option value="monthly">Monthly</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="absence_card_no"> Absence Card No</label>
+                      <div class="col-lg-9"><input type="text" id="absence_card_no" name="absence_card_no" class="form-control" placeholder="Absence Card No">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="join_date"><span style="color: red;">*</span> Join Date</label>
+                      <div class="col-lg-9"><input type="date" id="join_date" name="join_date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="grade"> Grade</label>
+                      <div class="col-lg-9"><input type="text" id="grade" name="grade" class="form-control" placeholder="Grade">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="organization_id"> Organization Id</label>
+                      <div class="col-lg-9"><input type="text" id="organization_id" name="organization_id" class="form-control" placeholder="Organization Id">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="organization_name"> Organization Name</label>
+                      <div class="col-lg-9"><input type="text" id="organization_name" name="organization_name" class="form-control" placeholder="Organization Name" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="position_id"> Position Id</label>
+                      <div class="col-lg-9"><input type="text" id="position_id" name="position_id" class="form-control" placeholder="Position Id">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="position_title"> Position Title</label>
+                      <div class="col-lg-9"><input type="text" id="position_title" name="position_title" class="form-control" placeholder="Position Title">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="company_office"> Company Office</label>
+                      <div class="col-lg-9"><input type="text" id="company_office" name="company_office" class="form-control" placeholder="Company Office">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="note"> Note</label>
+                      <div class="col-lg-9"><input type="text" id="note" name="note" class="form-control" placeholder="Note">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="work_location"> Work Location</label>
+                      <div class="col-lg-9"><input type="text" id="work_location" name="work_location" class="form-control" placeholder="Work Location">
+                      </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Salary Info</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="npwp_no"> NPWP No</label>
+                      <div class="col-lg-9"><input type="text" id="npwp_no" name="npwp_no" class="form-control" placeholder="NPWP No">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="npwp_submitted_date"> NPWP Submitted Date</label>
+                      <div class="col-lg-9"><input type="date" id="npwp_submitted_date" name="npwp_submitted_date" class="form-control" placeholder="NPWP Submitted Date">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="skip_basic_salary"> Skip Basic Salary</label>
+                      <div class="col-lg-9"><input type="checkbox" id="skip_basic_salary" name="skip_basic_salary">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="basic_salary"><span style="color: red;">*</span> Basic Salary</label>
+                      <div class="col-lg-9"><input type="text" id="basic_salary" name="basic_salary" class="form-control" placeholder="Basic Salary">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="currency"><span style="color: red;">*</span> Currency</label>
+                      <div class="col-lg-9"><input type="text" id="currency" name="currency" class="form-control" placeholder="Currency">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="per"> Per</label>
+                      <div class="col-lg-9"><input type="text" id="per" name="per" class="form-control" placeholder="Per">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="basic_salary_unit"><span style="color: red;">*</span> Basic Salary Unit</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="basic_salary_unit" name="basic_salary_unit">
+                      <option value="WEEK">Week</option>
+                      <option value="MONTH" selected>Month</option>
+                      <option value="YEAR">Year</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="process_method"><span style="color: red;">*</span> Process Method</label>
+                      <div class="col-lg-9"><input type="text" id="process_method" name="process_method" class="form-control" placeholder="Process Method">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="payment_frequency"><span style="color: red;">*</span> Payment Frequency</label>
+                      <div class="col-lg-9"><input type="text" id="payment_frequency" name="payment_frequency" class="form-control" placeholder="Payment Frequency">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="wage_template"><span style="color: red;">*</span> Wage Template</label>
+                      <div class="col-lg-9"><input type="text" id="wage_template" name="wage_template" class="form-control" placeholder="Wage Template">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

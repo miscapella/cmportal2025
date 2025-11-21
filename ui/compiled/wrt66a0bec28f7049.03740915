@@ -1,0 +1,52 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-07-24 15:43:46
+         compiled from "ui\theme\softhash\prog\INV-CGT\history-inventaris.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:136460958466a0bc4ed232e6-33374062%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'f1e66dd45654314558a7a48ebcfddb972751bf9f' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\INV-CGT\\history-inventaris.tpl',
+      1 => 1721810626,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '136460958466a0bc4ed232e6-33374062',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_66a0bc4ed4de91_88179038',
+  'variables' => 
+  array (
+    'nourut' => 0,
+    'ds' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_66a0bc4ed4de91_88179038')) {function content_66a0bc4ed4de91_88179038($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div
+        class="panel-body detail-pr-input"
+        style="overflow: auto; white-space: nowrap"
+      >
+        <div class="form-group">PURCHASE REQUISITION ITEM #<?php echo $_smarty_tpl->tpl_vars['nourut']->value;?>
+</div><br>
+          <div class="form-group" ><label class="col-lg-2 control-label" for="keperluan">Keperluan</label><span class="col-lg-1" style="text-align: right">:</span>
+            <input class="col-lg-9" type="text" id="keperluan" name="keperluan" class="form-control" value="Tes" disabled>
+          </div><br>
+            <div class="form-group"><label class="col-lg-2 control-label" for="line">Bagian</label><span class="col-lg-1" style="text-align: right">:</span>
+            <a href="#" class="detail-bagian col-lg-9" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['line'];?>
+">Tes</a>
+          </div><br>
+        <br />
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

@@ -1,0 +1,200 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-04-25 14:05:30
+         compiled from "ui\theme\softhash\prog\FORM\add-input-form.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3139801164474fe642fc04-50537469%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e34480cc95db2a9445c71fd4b38c3bcbc1a3bbfc' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\FORM\\add-input-form.tpl',
+      1 => 1682406328,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '3139801164474fe642fc04-50537469',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_64474fe6462896_45975373',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'd' => 0,
+    'e' => 0,
+    'item' => 0,
+    'current' => 0,
+    'tg' => 0,
+    'items' => 0,
+    'pilihan' => 0,
+    'pilih' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_64474fe6462896_45975373')) {function content_64474fe6462896_45975373($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="section" id="section1">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body" style="background-color: #ccc;">
+                    <h3 style="text-align: center;"><b><?php echo $_smarty_tpl->tpl_vars['d']->value['nama_form'];?>
+</b></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+        <div class="alert alert-danger emsg" id="emsg1">
+            <a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+            <span id="emsgbody"></span>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <pre style="all:unset; white-space: pre-wrap;"><?php echo $_smarty_tpl->tpl_vars['d']->value['deskripsi'];?>
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body form-zoom" style="margin: 0;">
+                <?php $_smarty_tpl->tpl_vars["current"] = new Smarty_variable(1, null, 0);?>
+                <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['e']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['item']->value['section']==$_smarty_tpl->tpl_vars['current']->value+1){?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" id="section<?php echo $_smarty_tpl->tpl_vars['current']->value;?>
+">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body" style="background-color: #ccc;">
+                    <h3 style="text-align: center;"><b><?php echo $_smarty_tpl->tpl_vars['item']->value['pertanyaan'];?>
+</b></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+        <div class="alert alert-danger emsg" id="emsg<?php echo $_smarty_tpl->tpl_vars['current']->value;?>
+">
+            <a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+            <span id="emsgbody"></span>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <pre style="all:unset; white-space: pre-wrap;"><?php echo $_smarty_tpl->tpl_vars['item']->value['deskripsi'];?>
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body form-zoom" style="margin: 0;">
+                <?php $_smarty_tpl->tpl_vars["current"] = new Smarty_variable($_smarty_tpl->tpl_vars['current']->value+1, null, 0);?>
+                <?php }else{ ?>
+                    <td style="vertical-align: middle;"><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none"></td>
+                    <div class="form-group">
+                        <label class="control-label" for="jawaban"><?php echo $_smarty_tpl->tpl_vars['item']->value['pertanyaan'];?>
+</label><br>
+                        <pre style="all:unset; white-space: pre-wrap;"><?php echo $_smarty_tpl->tpl_vars['item']->value['deskripsi'];?>
+</pre>
+                        <?php if ($_smarty_tpl->tpl_vars['item']->value['tipe']=='string'){?>
+                        <input type="text" id="jawaban" name="jawaban[]" class="form-control"/>
+                        <?php }elseif($_smarty_tpl->tpl_vars['item']->value['tipe']=='datetime'){?>
+                        <input type="datetime-local" id="jawaban" name="jawaban[]" class="form-control"/>
+                        <?php }elseif($_smarty_tpl->tpl_vars['item']->value['tipe']=='file'){?>
+                        <input type="file" id="jawaban" name="jawaban[]" class="form-control"/>
+                        <?php }else{ ?>
+                            <?php  $_smarty_tpl->tpl_vars['items'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['items']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['items']->key => $_smarty_tpl->tpl_vars['items']->value){
+$_smarty_tpl->tpl_vars['items']->_loop = true;
+?>
+                                <?php if ($_smarty_tpl->tpl_vars['items']->value['kode']==$_smarty_tpl->tpl_vars['item']->value['tipe']){?>
+                                    <?php if ($_smarty_tpl->tpl_vars['items']->value['tipe']=='dropdown'){?>
+                                        <select name="jawaban[]" id="jawaban">
+                                            <option value="">Pilih</option>
+                                            <?php $_smarty_tpl->tpl_vars['pilihan'] = new Smarty_variable(explode(",",$_smarty_tpl->tpl_vars['items']->value['value']), null, 0);?>
+                                            <?php  $_smarty_tpl->tpl_vars['pilih'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pilih']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['pilihan']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pilih']->key => $_smarty_tpl->tpl_vars['pilih']->value){
+$_smarty_tpl->tpl_vars['pilih']->_loop = true;
+?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+</option>
+                                            <?php } ?>
+                                        </select>
+                                    <?php }elseif($_smarty_tpl->tpl_vars['items']->value['tipe']=='checkbox'){?>
+                                        <?php $_smarty_tpl->tpl_vars['pilihan'] = new Smarty_variable(explode(",",$_smarty_tpl->tpl_vars['items']->value['value']), null, 0);?>
+                                        <br>
+                                        <?php  $_smarty_tpl->tpl_vars['pilih'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pilih']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['pilihan']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pilih']->key => $_smarty_tpl->tpl_vars['pilih']->value){
+$_smarty_tpl->tpl_vars['pilih']->_loop = true;
+?>
+                                        <input type="checkbox" name="jawaban[]" value="<?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+"><label style="font-weight: normal"> <?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+</label><br>
+                                        <?php } ?>
+                                    <?php }elseif($_smarty_tpl->tpl_vars['items']->value['tipe']=='radiobutton'){?>
+                                        <?php $_smarty_tpl->tpl_vars['pilihan'] = new Smarty_variable(explode(",",$_smarty_tpl->tpl_vars['items']->value['value']), null, 0);?>
+                                        <br>
+                                        <?php  $_smarty_tpl->tpl_vars['pilih'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pilih']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['pilihan']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pilih']->key => $_smarty_tpl->tpl_vars['pilih']->value){
+$_smarty_tpl->tpl_vars['pilih']->_loop = true;
+?>
+                                        <input type="radiobutton" name="jawaban[]" value="<?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+"><label style="font-weight: normal"> <?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+</label><br>
+                                        <?php } ?>
+                                    <?php }?>
+                                <?php }?>
+                            <?php } ?>
+                        <?php }?>
+                    </div>
+                <?php }?>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

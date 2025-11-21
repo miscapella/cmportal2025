@@ -1,0 +1,327 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-03-14 15:26:24
+         compiled from "ui\theme\softhash\prog\GAS\add-pr-supplier.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:24461638663f2fe25309457-20919109%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'acf729b4b4ceeb215a8c3fea80df356d0f70839e' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\add-pr-supplier.tpl',
+      1 => 1678781068,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '24461638663f2fe25309457-20919109',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_63f2fe253d1fe2_11295674',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    'd' => 0,
+    'idate' => 0,
+    'clist' => 0,
+    'e' => 0,
+    'ds' => 0,
+    'tg' => 0,
+    'r' => 0,
+    'nourut' => 0,
+    'tg1' => 0,
+    'r1' => 0,
+    'nm_inventaris' => 0,
+    'nm_item' => 0,
+    'merk' => 0,
+    'tipe' => 0,
+    'spesifikasi' => 0,
+    'satuan' => 0,
+    'tg3' => 0,
+    'r3' => 0,
+    'tg4' => 0,
+    'r4' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_63f2fe253d1fe2_11295674')) {function content_63f2fe253d1fe2_11295674($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>DETAIL PURCHASE REQUISITION</h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/list-<?php echo strtolower($_smarty_tpl->tpl_vars['d']->value['posisi']);?>
+-<?php echo strtolower($_smarty_tpl->tpl_vars['d']->value['status']);?>
+/" class="btn btn-primary btn-sm">Daftar PR</a>
+				</div>
+                <ul style="padding: 0;list-style-type:none">
+                   <li><button class="btn btn-danger btn-sm" name="save" id="save">SAVE</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+            <div class="ibox-content" id="ibox_form">
+				<div class="form-group" style="margin-bottom:40px"><label class="col-lg-3 control-label" for="no_pr">No. PR</label>
+					<div class="col-lg-9"><input type="text" id="no_pr" name="no_pr" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['no_pr'];?>
+" disabled></div>
+				</div>
+				<div class="form-group"><label class="col-lg-3 control-label" for="tgl_pr">Tanggal PR</label>
+					<div class="col-lg-9"><input type="text" id="idate" name="idate" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['idate']->value;?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body" style="overflow:auto;white-space:nowrap;">
+                <form class="form-horizontal" id="rform">
+					<table class="table table-bordered table-hover sys_table">
+						<thead>
+						<tr>
+							<th style="width:2%">#</th>
+							<th>Keperluan</th>
+							<th>Item Stock</th>
+							<th>Merk</th>
+							<th>Tipe</th>
+							<th>Spesifikasi</th>
+							<th>Satuan</th>
+							<th>Qty Req</th>
+							<th>Stock</th>
+							<th>Tgl Diperlukan</th>
+							<th>Keterangan Pembelian</th>
+							<th>Supplier 1</th>
+							<th>Harga Supplier 1</th>
+							<th>Supplier 2</th>
+							<th>Harga Supplier 2</th>
+							<th>Supplier 3</th>
+							<th>Harga Supplier 3</th>
+							<th>Supplier Pilihan</th>
+						</tr>
+						</thead>
+						<tbody>
+						<div style="display:none" name="opt" id="opt"><?php echo $_smarty_tpl->tpl_vars['clist']->value;?>
+</div>
+						<?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable(1, null, 0);?>
+						<?php  $_smarty_tpl->tpl_vars['ds'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ds']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['e']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ds']->key => $_smarty_tpl->tpl_vars['ds']->value){
+$_smarty_tpl->tpl_vars['ds']->_loop = true;
+?>
+							<tr>
+								<?php $_smarty_tpl->tpl_vars["nm_inventaris"] = new Smarty_variable('', null, 0);?>
+								<?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_inventaris']=='STOCK'){?>
+									<?php $_smarty_tpl->tpl_vars["nm_inventaris"] = new Smarty_variable("STOCK", null, 0);?>
+								<?php }else{ ?>
+									<?php  $_smarty_tpl->tpl_vars['r'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r']->key => $_smarty_tpl->tpl_vars['r']->value){
+$_smarty_tpl->tpl_vars['r']->_loop = true;
+?>
+										<?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_inventaris']==$_smarty_tpl->tpl_vars['r']->value['kd_inventaris']){?>
+											<?php $_smarty_tpl->tpl_vars["nm_inventaris"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r']->value['nm_inventaris']), null, 0);?>
+										<?php }?>
+									<?php } ?>
+								<?php }?>
+								<td><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none"><?php echo $_smarty_tpl->tpl_vars['nourut']->value;?>
+</td>
+								<td style="display: none;"><input type="text" name="kd_inventaris[]" class="kd_inventaris" readonly value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_inventaris'];?>
+"></td>
+								<td style="display: none;"><input type="text" name="kd_item[]" class="kd_item" readonly value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_item'];?>
+"></td>
+								<?php $_smarty_tpl->tpl_vars["nm_item"] = new Smarty_variable('', null, 0);?>
+								<?php $_smarty_tpl->tpl_vars["merk"] = new Smarty_variable('', null, 0);?>
+								<?php $_smarty_tpl->tpl_vars["satuan"] = new Smarty_variable('', null, 0);?>
+								<?php $_smarty_tpl->tpl_vars["tipe"] = new Smarty_variable('', null, 0);?>
+								<?php $_smarty_tpl->tpl_vars["spesifikasi"] = new Smarty_variable('', null, 0);?>
+								<?php  $_smarty_tpl->tpl_vars['r1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r1']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg1']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r1']->key => $_smarty_tpl->tpl_vars['r1']->value){
+$_smarty_tpl->tpl_vars['r1']->_loop = true;
+?>
+									<?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_item']==$_smarty_tpl->tpl_vars['r1']->value['kd_item']){?>
+										<?php $_smarty_tpl->tpl_vars["nm_item"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['nm_item']), null, 0);?>
+										<?php $_smarty_tpl->tpl_vars["merk"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['merk']), null, 0);?>
+										<?php $_smarty_tpl->tpl_vars["satuan"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['satuan']), null, 0);?>
+										<?php $_smarty_tpl->tpl_vars["tipe"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['tipe']), null, 0);?>
+										<?php $_smarty_tpl->tpl_vars["spesifikasi"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['spesifikasi']), null, 0);?>
+									<?php }?>
+								<?php } ?>
+								<td><input type="text" name="nm_inventaris[]" class="nm_inventaris" readonly value="<?php echo $_smarty_tpl->tpl_vars['nm_inventaris']->value;?>
+"></td>
+								<td><input type="text" name="nm_itemstock[]" class="nm_item" readonly value="<?php echo $_smarty_tpl->tpl_vars['nm_item']->value;?>
+"></td>
+								<td><input type="text" name="merk[]" class="merk" readonly value="<?php echo $_smarty_tpl->tpl_vars['merk']->value;?>
+"></td>
+								<td><input type="text" name="tipe[]" class="tipe" readonly value="<?php echo $_smarty_tpl->tpl_vars['tipe']->value;?>
+"></td>
+								<td><input type="text" name="spesifikasi[]" class="spesifikasi" readonly value="<?php echo $_smarty_tpl->tpl_vars['spesifikasi']->value;?>
+"></td>
+								<td><input type="text" name="satuan[]" class="satuan" readonly value="<?php echo $_smarty_tpl->tpl_vars['satuan']->value;?>
+"></td>
+								<td><input type="text" name="qty_req[]" class="qty_req amount" value=<?php echo $_smarty_tpl->tpl_vars['ds']->value['qty_req'];?>
+ readonly></td>
+								<td><input type="text" name="qty_balance[]" class="qty_balance amount" value=<?php echo $_smarty_tpl->tpl_vars['ds']->value['qty_stock'];?>
+ readonly><input type="text" name="baru[]" style="display:none" class="baru" value="baru"></td>
+								<td><input type="text" name="tgl[]" class="tgl" readonly value=<?php echo $_smarty_tpl->tpl_vars['ds']->value['tgl_diperlukan'];?>
+></td>
+								<td><input type="text" name="keterangan[]" class="keterangan" readonly value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keperluan'];?>
+"></td>
+								<?php $_smarty_tpl->tpl_vars["nm_supplier1"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["contact1"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["lama_bayar1"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["nm_supplier2"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["contact2"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["lama_bayar2"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["nm_supplier3"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["contact3"] = new Smarty_variable('', null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars["lama_bayar3"] = new Smarty_variable('', null, 0);?>
+                                <?php  $_smarty_tpl->tpl_vars['r3'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r3']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg3']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r3']->key => $_smarty_tpl->tpl_vars['r3']->value){
+$_smarty_tpl->tpl_vars['r3']->_loop = true;
+?>
+                                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_supplier1']==$_smarty_tpl->tpl_vars['r3']->value['kd_supplier']){?>
+                                        <?php $_smarty_tpl->tpl_vars["nm_supplier1"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['nm_supplier']), null, 0);?>
+                                        <?php $_smarty_tpl->tpl_vars["contact1"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['contact']), null, 0);?>
+                                        <?php $_smarty_tpl->tpl_vars["lama_bayar1"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['lama_bayar']), null, 0);?>
+                                    <?php }?>
+                                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_supplier2']==$_smarty_tpl->tpl_vars['r3']->value['kd_supplier']){?>
+                                        <?php $_smarty_tpl->tpl_vars["nm_supplier2"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['nm_supplier']), null, 0);?>
+                                        <?php $_smarty_tpl->tpl_vars["contact2"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['contact']), null, 0);?>
+                                        <?php $_smarty_tpl->tpl_vars["lama_bayar2"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['lama_bayar']), null, 0);?>
+                                    <?php }?>
+                                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_supplier3']==$_smarty_tpl->tpl_vars['r3']->value['kd_supplier']){?>
+                                        <?php $_smarty_tpl->tpl_vars["nm_supplier3"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['nm_supplier']), null, 0);?>
+                                        <?php $_smarty_tpl->tpl_vars["contact3"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['contact']), null, 0);?>
+                                        <?php $_smarty_tpl->tpl_vars["lama_bayar3"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['lama_bayar']), null, 0);?>
+                                    <?php }?>
+                                <?php } ?>
+								<td>
+									<select name="kd_supplier1[]" class="kd_supplier" style="width: 110px;">
+                                        <option value="">Pilih Supplier 1</option>
+									    <?php  $_smarty_tpl->tpl_vars['r4'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r4']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg4']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r4']->key => $_smarty_tpl->tpl_vars['r4']->value){
+$_smarty_tpl->tpl_vars['r4']->_loop = true;
+?>
+									        <?php if ($_smarty_tpl->tpl_vars['r4']->value['kd_item']==$_smarty_tpl->tpl_vars['ds']->value['kd_item']){?>
+									            <option value="<?php echo $_smarty_tpl->tpl_vars['r4']->value['kd_supplier'];?>
+" <?php if ($_smarty_tpl->tpl_vars['r4']->value['kd_supplier']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier1']){?> selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['r4']->value['kd_supplier'];?>
+</option>
+									        <?php }?>
+										<?php } ?>
+									</select>
+								</td>
+								<td><input type="text" name="harga1[]" class="harga amount" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['harga1'];?>
+"></td>
+								<td><input type="text" name="keterangan_supplier1[]" class="keterangan" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keterangan_supplier1'];?>
+"></td>
+								<td><input type="file" name="keterangan_supplier1[]" class="keterangan" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keterangan_supplier1'];?>
+"></td>
+								<td>
+									<select name="kd_supplier2[]" class="kd_supplier" style="width: 110px;">
+										<option value="">Pilih Supplier 2</option>
+									    <?php  $_smarty_tpl->tpl_vars['r4'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r4']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg4']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r4']->key => $_smarty_tpl->tpl_vars['r4']->value){
+$_smarty_tpl->tpl_vars['r4']->_loop = true;
+?>
+									        <?php if ($_smarty_tpl->tpl_vars['r4']->value['kd_item']==$_smarty_tpl->tpl_vars['ds']->value['kd_item']){?>
+									            <option value="<?php echo $_smarty_tpl->tpl_vars['r4']->value['kd_supplier'];?>
+" <?php if ($_smarty_tpl->tpl_vars['r4']->value['kd_supplier']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier2']){?> selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['r4']->value['kd_supplier'];?>
+</option>
+									        <?php }?>
+										<?php } ?>
+									</select>
+								</td>
+								<td><input type="text" name="harga2[]" class="harga amount" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['harga2'];?>
+" ></td>
+								<td>
+									<select name="kd_supplier3[]" class="kd_supplier"  style="width: 110px;">
+										<option value="">Pilih Supplier 3</option>
+									    <?php  $_smarty_tpl->tpl_vars['r4'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r4']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg4']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r4']->key => $_smarty_tpl->tpl_vars['r4']->value){
+$_smarty_tpl->tpl_vars['r4']->_loop = true;
+?>
+									        <?php if ($_smarty_tpl->tpl_vars['r4']->value['kd_item']==$_smarty_tpl->tpl_vars['ds']->value['kd_item']){?>
+									            <option value="<?php echo $_smarty_tpl->tpl_vars['r4']->value['kd_supplier'];?>
+" <?php if ($_smarty_tpl->tpl_vars['r4']->value['kd_supplier']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier3']){?> selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['r4']->value['kd_supplier'];?>
+</option>
+									        <?php }?>
+										<?php } ?>
+									</select>
+								</td>
+								<td><input type="text" name="harga3[]" class="harga amount" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['harga3'];?>
+"></td>
+								<td>
+								    <input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan[]" id="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan1[]" class="cekbox" value="supplier1" <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']=='supplier1'){?> checked <?php }?>> <label style="font-weight: normal" for="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan1[]"> Supplier 1</label><br>
+									<input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan[]" id="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan2[]" class="cekbox" value="supplier2" <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']=='supplier2'){?> checked <?php }?>> <label style="font-weight: normal" for="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan2[]"> Supplier 2</label><br>
+									<input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan[]" id="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan3[]" class="cekbox" value="supplier3" <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']=='supplier3'){?> checked <?php }?>> <label style="font-weight: normal" for="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan3[]"> Supplier 3</label>
+								</td>
+							</tr>
+				        <?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable($_smarty_tpl->tpl_vars['nourut']->value+1, null, 0);?>
+						<?php } ?>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

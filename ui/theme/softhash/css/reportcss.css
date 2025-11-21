@@ -1,0 +1,68 @@
+/*mPDF*/
+.cetak-mutasi {
+    border: 1.5px solid black;
+    padding: 5px;
+    margin: 0px;
+}
+
+.cetak-mutasi table,.cetak-mutasi th,.cetak-mutasi tr,.cetak-mutasi td{
+    color: black;
+    font-size: 12px;
+/*    border: 1px solid red;*/
+}
+
+.mutasi-logo {
+    width: 180px;
+}
+
+span {
+    border: 1.5px solid black;
+}
+
+.cetak-stock-gudang {
+    padding: 5px;
+    margin: 0px;
+}
+.cetak-stock-gudang table,.cetak-stock-gudang th,.cetak-stock-gudang tr,.cetak-stock-gudang td{
+    color: black;
+    font-size: 12px;
+    text-align: left;
+/*    border: 1px solid red;*/
+}
+.header {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+}
+.cetak-stock-gudang .tabel-isi {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.cetak-stock-gudang .tabel-isi td{
+    border-right: 1px solid black;
+    border-collapse: collapse;
+}
+.tabel-fixed {
+    table-layout:fixed;
+    overflow: hidden;
+}
+
+.cetak-pembelian table,.cetak-pembelian th,.cetak-pembelian tr,.cetak-pembelian td{
+    color: black;
+    font-size: 10px;
+}
+.cetak-pembelian .tabel-isi {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.cetak-pembelian .tabel-isi td{
+    border-right: 1px solid black;
+    border-collapse: collapse;
+}
+.cetak-pembelian .tabel-kosong {
+    border: none;
+    border-collapse: collapse;
+}
+.cetak-pembelian span {
+    border: none;
+}

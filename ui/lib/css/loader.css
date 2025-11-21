@@ -1,0 +1,29 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Full viewport height */
+  }
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(0, 61, 130);
+    border-radius: 50%;
+    border-top-color: #0001;
+    display: inline-block;
+    animation: loadingspinner .7s linear infinite;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes loadingspinner {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}

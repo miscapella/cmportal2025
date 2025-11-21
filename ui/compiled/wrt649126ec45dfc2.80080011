@@ -1,0 +1,105 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-06-20 11:11:24
+         compiled from "ui\theme\softhash\prog\FORM\list-approval.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:10633279676490ff7aadab53-74048491%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '77366149534f60c0045f9406a68a0c7bb42edf02' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\FORM\\list-approval.tpl',
+      1 => 1687234283,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '10633279676490ff7aadab53-74048491',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6490ff7b305520_18004916',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_L' => 0,
+    'd' => 0,
+    'nourut' => 0,
+    'i' => 0,
+    'form' => 0,
+    'respondent' => 0,
+    'ds' => 0,
+    'U' => 0,
+    '_url' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6490ff7b305520_18004916')) {function content_6490ff7b305520_18004916($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-bordered table-hover sys_table">
+                    <thead>
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 25%;">Nama Form</th>
+                        <th style="width: 30%;">Nama Respondent</th>
+                        <th style="width: 20%;">Details</th>
+                        <th class="text-right"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Manage'];?>
+</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					<?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable(1, null, 0);?>
+                    <?php $_smarty_tpl->tpl_vars["i"] = new Smarty_variable(0, null, 0);?>
+                    <?php  $_smarty_tpl->tpl_vars['ds'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ds']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['d']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ds']->key => $_smarty_tpl->tpl_vars['ds']->value){
+$_smarty_tpl->tpl_vars['ds']->_loop = true;
+?>
+                        <tr>
+                            <td><?php echo $_smarty_tpl->tpl_vars['nourut']->value;?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['form']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['respondent']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+</td>
+                            <td class="text-center">
+                                <a href="#" class="detail" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value;?>
+"><u>Details</u></a>
+                            </td>
+                            <td class="text-right">
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['U']->value;?>
+" target="_blank" class="btn btn-success btn-xs">Approve</a>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+" target="_blank" class="btn btn-danger btn-xs">Reject</a>
+                            </td>
+                        </tr>
+                        <?php $_smarty_tpl->tpl_vars["i"] = new Smarty_variable($_smarty_tpl->tpl_vars['i']->value+1, null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable($_smarty_tpl->tpl_vars['nourut']->value+1, null, 0);?>
+                    <?php } ?>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

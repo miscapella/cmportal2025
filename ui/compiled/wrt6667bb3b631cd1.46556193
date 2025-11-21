@@ -1,0 +1,358 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-11 09:49:31
+         compiled from "ui\theme\softhash\prog\HRD\add-karyawan.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:16562181536667b9ab9d0af4-97571101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'dec82ac03aa93e68e1fd147511c405a8026b5b2e' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\add-karyawan.tpl',
+      1 => 1718074121,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '16562181536667b9ab9d0af4-97571101',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6667b9aba05960_87706311',
+  'variables' => 
+  array (
+    '_url' => 0,
+    'departemen' => 0,
+    'id_jabatan' => 0,
+    'nama_jabatan' => 0,
+    'user' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6667b9aba05960_87706311')) {function content_6667b9aba05960_87706311($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+karyawan/list/" class="btn btn-primary btn-xs">Daftar Karyawan</a>
+				</div>
+            </div>
+            <div class="navigation">
+              <button class="nav-tab" id="karyawan-tab">Karyawan Baru</button>
+              <button class="nav-tab" id="personal-tab">Informasi Personal</button>
+              <button class="nav-tab" id="pekerjaan-tab">Informasi Pekerjaan</button>
+              <button class="nav-tab" id="gaji-tab">Informasi Gaji</button>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <div class="alert alert-danger" id="emsg">
+                    <span id="emsgbody"></span>
+                </div>
+                <form class="form-horizontal" id="rformkaryawan">
+                  <div id="karyawan-baru">
+                    <div class="col-lg-12"><h1 class="text-center">Karyawan Baru</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="id_karyawan"> Id Karyawan</label>
+                        <div class="col-lg-9"><input type="text" id="id_karyawan" name="id_karyawan" class="form-control" placeholder="Id Karyawan" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_karyawan"> Nama Karyawan</label>
+                        <div class="col-lg-9"><input type="text" id="nama_karyawan" name="nama_karyawan" class="form-control" placeholder="Nama Karyawan" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_depan"><span style="color: red;">*</span> Nama Depan</label>
+                        <div class="col-lg-9"><input type="text" id="nama_depan" name="nama_depan" class="form-control" placeholder="Nama Depan">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_tengah"> Nama Tengah</label>
+                      <div class="col-lg-9"><input type="text" id="nama_tengah" name="nama_tengah" class="form-control" placeholder="Nama Tengah">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_belakang"> Nama Belakang</label>
+                      <div class="col-lg-9"><input type="text" id="nama_belakang" name="nama_belakang" class="form-control" placeholder="Nama Belakang">
+                      </div>
+                    </div>
+                  </div>
+                  <div id="info-personal">
+                    <div class="col-lg-12"><h1 class="text-center">Informasi Personal</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="id_pengguna"> Id Pengguna</label>
+                      <div class="col-lg-9"><input type="text" id="id_pengguna" name="id_pengguna" class="form-control" placeholder="Id Pengguna" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="gambar"> Gambar</label>
+                        <div class="col-lg-9"><input type="file" id="gambar" name="gambar" class="files">
+                            <input type="text" id="sgambar" name="sgambar" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_ktp"><span style="color: red;">*</span> No KTP</label>
+                      <div class="col-lg-9"><input type="number" id="no_ktp" name="no_ktp" class="form-control" placeholder="No KTP">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="departemen"><span style="color: red;">*</span> Departemen</label>
+                        <div class="col-lg-9">
+                            <select class="form-control rolegroup" id="departemen" name="departemen" style="width: 100%">
+                                <?php echo $_smarty_tpl->tpl_vars['departemen']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tempat_lahir"><span style="color: red;">*</span> Tempat Lahir</label>
+                      <div class="col-lg-9"><input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control" placeholder="Tempat Lahir">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_lahir"><span style="color: red;">*</span> Tanggal Lahir</label>
+                      <div class="col-lg-9"><input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="jenis_kelamin"><span style="color: red;">*</span> Jenis Kelamin</label>
+                        <div class="col-lg-9"><select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="status_pernikahan"><span style="color: red;">*</span> Status Pernikahan</label>
+                      <div class="col-lg-9"><select class="form-control" id="status_pernikahan" name="status_pernikahan">
+                      <option value="Lajang">Lajang</option>
+                      <option value="Menikah">Menikah</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="agama"><span style="color: red;">*</span> Agama</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="agama" name="agama">
+                      <option value="Islam">Islam</option>
+                      <option value="Kristen Protestan">Kristen Protestan</option>
+                      <option value="Katolik">Katolik</option>
+                      <option value="Buddha">Buddha</option>
+                      <option value="Hindu">Hindu</option>
+                      <option value="Khonghucu">Khonghucu</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="golongan_darah"> Golongan Darah</label>
+                      <div class="col-lg-9"><input type="text" id="golongan_darah" name="golongan_darah" class="form-control" placeholder="Golongan Darah">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kewarganegaraan"> Kewarganegaraan</label>
+                      <div class="col-lg-9"><input type="text" id="kewarganegaraan" name="kewarganegaraan" class="form-control" placeholder="Kewarganegaraan">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_telepon"> No Telepon</label>
+                      <div class="col-lg-9"><input type="text" id="no_telepon" name="no_telepon" class="form-control" placeholder="No Telepon">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="email"> Email</label>
+                      <div class="col-lg-9"><input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_asuransi"> No Asuransi</label>
+                      <div class="col-lg-9"><input type="number" id="no_asuransi" name="no_asuransi" class="form-control" placeholder="No Asuransi">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_masuk_asuransi"> Tanggal Masuk Asuransi</label>
+                      <div class="col-lg-9"><input type="date" id="tgl_masuk_asuransi" name="tgl_masuk_asuransi" class="form-control" placeholder="Tanggal Masuk Asuransi">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_bpjs_kesehatan"> No BPJS Kesehatan</label>
+                      <div class="col-lg-9"><input type="number" id="no_bpjs_kesehatan" name="no_bpjs_kesehatan" class="form-control" placeholder="No BPJS Kesehatan">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_masuk_bpjs_kesehatan"> Tanggal Masuk BPJS Kesehatan</label>
+                      <div class="col-lg-9"><input type="date" id="tgl_masuk_bpjs_kesehatan" name="tgl_masuk_bpjs_kesehatan" class="form-control" placeholder="Tanggal Masuk BPJS Kesehatan">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kode_faskes"> Kode Faskes</label>
+                      <div class="col-lg-9"><input type="text" id="kode_faskes" name="kode_faskes" class="form-control" placeholder="Kode Faskes">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_faskes"> Nama Faskes</label>
+                      <div class="col-lg-9"><input type="text" id="nama_faskes" name="nama_faskes" class="form-control" placeholder="Nama Faskes">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kelas_rawat"> Kelas Rawat</label>
+                      <div class="col-lg-9"><input type="text" id="kelas_rawat" name="kelas_rawat" class="form-control" placeholder="Kelas Rawat">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kode_tk"> Kode TK</label>
+                      <div class="col-lg-9"><input type="text" id="kode_tk" name="kode_tk" class="form-control" placeholder="Kode TK">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kesediaan_bepergian"> Kesediaan bepergian</label>
+                      <div class="col-lg-9"><input type="checkbox" id="kesediaan_bepergian" name="kesediaan_bepergian">
+                      </div>
+                    </div>
+                  </div>
+                  <div id="info-pekerjaan">
+                    <div class="col-lg-12"><h1 class="text-center">Informasi Pekerjaan</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_company_id"><span style="color: red;">*</span> Kode Perusahaan Supervisor</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_company_id" name="supervisor_company_id" class="form-control" placeholder="Kode Perusahaan Supervisor">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_id"><span style="color: red;">*</span> Id Supervisor</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_id" name="supervisor_id" class="form-control" placeholder="Id Supervisor">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_name"> Nama Supervisor</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_name" name="supervisor_name" class="form-control" placeholder="Nama Supervisor" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_category"> Kategori Karyawan</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_category" name="employee_category">
+                      <option value="">Kategori</option>
+                      <option value="kategori1">Kategori 1</option>
+                      <option value="kategori2">Kategori 2</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_status"><span style="color: red;">*</span> Status Karyawan</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_status" name="employee_status">
+                      <option value="active">Active</option>
+                      <option value="inactive">Inactive</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="probation"> Masa Percobaan (Bulan)</label>
+                      <div class="col-lg-9"><input type="text" id="probation" name="probation" class="form-control" placeholder="Percobaan">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_type"><span style="color: red;">*</span> Tipe Karyawan</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_type" name="employee_type">
+                      <option value="permanent">Permanent</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="remuneration"><span style="color: red;">*</span> Tipe Remunerasi</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="remuneration" name="remuneration">
+                      <option value="monthly">Monthly</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="absence_card_no"> No Kartu Absen</label>
+                      <div class="col-lg-9"><input type="text" id="absence_card_no" name="absence_card_no" class="form-control" placeholder="No Kartu Absen">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="join_date"><span style="color: red;">*</span> Tanggal bergabung</label>
+                      <div class="col-lg-9"><input type="date" id="join_date" name="join_date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="grade"> Nilai</label>
+                      <div class="col-lg-9"><input type="text" id="grade" name="grade" class="form-control" placeholder="Nilai">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="organization_id"> Kode Perusahaan</label>
+                      <div class="col-lg-9"><input type="text" id="organization_id" name="organization_id" class="form-control" placeholder="Kode Perusahaan">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="organization_name"> Nama Perusahaan</label>
+                      <div class="col-lg-9"><input type="text" id="organization_name" name="organization_name" class="form-control" placeholder="Nama Perusahaan" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="position_id"> Id Posisi</label>
+                        <div class="col-lg-9">
+                            <select class="form-control rolegroup" id="position_id" name="position_id" style="width: 100%">
+                                <?php echo $_smarty_tpl->tpl_vars['id_jabatan']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="position_title"> Nama Posisi</label>
+                        <div class="col-lg-9">
+                            <select class="form-control rolegroup" id="position_title" name="position_title" disabled>
+                                <?php echo $_smarty_tpl->tpl_vars['nama_jabatan']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="company_office"> Kantor Departemen</label>
+                      <div class="col-lg-9"><input type="text" id="company_office" name="company_office" class="form-control" placeholder="Kantor Departemen">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="note"> Catatan</label>
+                      <div class="col-lg-9"><input type="text" id="note" name="note" class="form-control" placeholder="Catatan">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="work_location"> Lokasi Kerja</label>
+                      <div class="col-lg-9"><input type="text" id="work_location" name="work_location" class="form-control" placeholder="Lokasi Kerja">
+                      </div>
+                    </div>
+                  </div>
+                  <div id="info-gaji">
+                    <div class="col-lg-12"><h1 class="text-center">Informasi Gaji</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_npwp"> No NPWP</label>
+                      <div class="col-lg-9"><input type="text" id="no_npwp" name="no_npwp" class="form-control" placeholder="No NPWP">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_pendaftaran_npwp"> Tanggal Pendaftaran NPWP</label>
+                      <div class="col-lg-9"><input type="date" id="tgl_pendaftaran_npwp" name="tgl_pendaftaran_npwp" class="form-control" placeholder="NPWP Submitted Date">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="lewati_gaji_pokok"> Lewati Gaji Pokok</label>
+                      <div class="col-lg-9"><input type="checkbox" id="lewati_gaji_pokok" name="lewati_gaji_pokok">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="basic_salary"><span style="color: red;">*</span> Gaji Pokok</label>
+                      <div class="col-lg-9"><input type="text" id="basic_salary" name="basic_salary" class="form-control" placeholder="Gaji Pokok">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="currency"><span style="color: red;">*</span> Mata Uang</label>
+                      <div class="col-lg-9"><input type="text" id="currency" name="currency" class="form-control" placeholder="Mata Uang">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="per"> Per</label>
+                      <div class="col-lg-9"><input type="text" id="per" name="per" class="form-control" placeholder="Per">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="basic_salary_unit"><span style="color: red;">*</span> Satuan Gaji Pokok</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="basic_salary_unit" name="basic_salary_unit">
+                      <option value="WEEK">Week</option>
+                      <option value="MONTH" selected>Month</option>
+                      <option value="YEAR">Year</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="process_method"><span style="color: red;">*</span> Proses Metode</label>
+                      <div class="col-lg-9"><input type="text" id="process_method" name="process_method" class="form-control" placeholder="Proses Metode">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="payment_frequency"><span style="color: red;">*</span> Frekuensi Pembayaran</label>
+                      <div class="col-lg-9"><input type="text" id="payment_frequency" name="payment_frequency" class="form-control" placeholder="Frekuensi Pembayaran">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="wage_template"><span style="color: red;">*</span> Templat Upah</label>
+                      <div class="col-lg-9"><input type="text" id="wage_template" name="wage_template" class="form-control" placeholder="Templat Upah">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="payroll_dependent_allowed"> Ketergantungan Gaji Diperbolehkan</label>
+                      <div class="col-lg-9"><input type="checkbox" id="payroll_dependent_allowed" name="payroll_dependent_allowed">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="tgl_dibuat"> Tanggal dibuat</label>
+                      <div class="col-lg-9"><input type="text" id="tgl_dibuat" name="tgl_dibuat" class="form-control" placeholder="Tanggal dibuat" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="dibuat_oleh"> Dibuat oleh</label>
+                      <div class="col-lg-9"><input type="text" id="dibuat_oleh" name="dibuat_oleh" class="form-control" placeholder="Dibuat oleh" value="<?php echo $_smarty_tpl->tpl_vars['user']->value['fullname'];?>
+" disabled>
+                      </div>
+                    </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9">
+                      <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

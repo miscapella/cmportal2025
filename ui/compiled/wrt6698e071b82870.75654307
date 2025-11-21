@@ -1,0 +1,145 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-07-18 16:29:21
+         compiled from "ui\theme\softhash\prog\INV-CGT\form-pelaporan.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12901094426698df20b03539-14953213%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '14fc60e02e04f321a9263d7b22010303a41f4c5b' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\INV-CGT\\form-pelaporan.tpl',
+      1 => 1721294960,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12901094426698df20b03539-14953213',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6698df20b3b5f3_68597151',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'd' => 0,
+    'item' => 0,
+    'pilihan' => 0,
+    'pilih' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6698df20b3b5f3_68597151')) {function content_6698df20b3b5f3_68597151($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'D:\\xampp7.4.8\\htdocs\\cmportal\\sysfrm\\lib\\smarty\\libs\\plugins\\modifier.replace.php';
+?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+ <?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+  <button class="close" data-dismiss="alert">×</button>
+  <i class="fa-fw fa fa-check"></i>
+  <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="section" id="section1">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body" style="background-color: #ccc">
+          <input
+            style="display: none"
+            type="text"
+            id="kode"
+            class="form-control"
+            value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kode_form'];?>
+"
+          />
+          <h3 style="text-align: center"><b>Form Pelaporan</b></h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="alert alert-danger emsg" id="emsg1">
+        <a href="#"
+          ><i class="fal fa-times" style="float: right" id="closeMsg1"></i
+        ></a>
+        <span id="emsgbody1"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <pre style="all: unset; white-space: pre-wrap"><?php echo $_smarty_tpl->tpl_vars['d']->value['deskripsi'];?>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body form-zoom" style="margin: 0">
+          <div class="form-group">
+            <label class="control-label label-pertanyaan" for="jawaban"
+              >Pilih Item</label
+            ><br />
+            <select
+              class="jawaban"
+              name="jawaban<?php echo $_smarty_tpl->tpl_vars['item']->value['section'];?>
+[]"
+              id="<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['item']->value['section'],'.','');?>
+"
+            >
+              <option value="">Pilih</option>
+              <option value="PC">PC</option>
+              <option value="KEYBOARD">KEYBOARD</option>
+              <option value="PRINTER">PRINTER</option>
+              <!-- <?php  $_smarty_tpl->tpl_vars['pilih'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pilih']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['pilihan']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pilih']->key => $_smarty_tpl->tpl_vars['pilih']->value){
+$_smarty_tpl->tpl_vars['pilih']->_loop = true;
+?> -->
+              <!-- <?php } ?> -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="control-label label-pertanyaan">Pilih Komponen?</label>
+            <input id="<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['item']->value['section'],'.','');?>
+" type="checkbox" name="jawaban<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['item']->value['section'],'.','');?>
+[]" value="<?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+"><label style="font-weight: normal"> <?php echo $_smarty_tpl->tpl_vars['pilih']->value;?>
+</label><br>
+          </div>
+          <div class="form-group">
+            <label class="control-label label-pertanyaan" for="jawaban"
+              >Rincian Permasalahan</label
+            ><br />
+            <textarea
+              name=""
+              id=""
+              class="form-control"
+              rows="5"
+              style="resize: none; width: 75%"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <button class="btn btn-danger" type="submit" id="save">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12"><?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>

@@ -1,0 +1,126 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-04-20 13:51:27
+         compiled from "ui\theme\softhash\prog\FORM\add-form.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:4934156936440d93a2008c7-84087684%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5298d30f369afcac8f11a84c3c1c5830e40c4a91' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\FORM\\add-form.tpl',
+      1 => 1681973484,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '4934156936440d93a2008c7-84087684',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6440d93a255f44_51520726',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6440d93a255f44_51520726')) {function content_6440d93a255f44_51520726($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<!-- <div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>TAMBAH FORM</h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+                <ul style="padding: 0;list-style-type:none">
+                   <li><button class="btn btn-success btn-sm" name="add" id="add"><i class="fa fa-plus"></i> Tambah Kolom</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger btn-sm" name="save" id="save">Simpan</button></li>
+				   <button class="btn btn-success btn-sm" name="add_section" id="add_section"><i class="fa fa-plus"></i> Add Section</button>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+<input type="number" name="section_number" id="section_number" style="display:none" value=1>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3 style="text-align: center;"><b>CREATE NEW FORM</b></h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+				<button class="btn btn-danger btn-sm hapus" name="delete_question" title="Delete Question"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="form-group"><label class="col-lg-3 control-label" for="form_title">Form Title </label>
+					<div class="col-lg-9"><input type="text" id="form_title" name="form_title" class="form-control">
+					</div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="form_description">Form Description </label>
+					<div class="col-lg-9"><input type="text" id="form_description" name="form_description" class="form-control">
+					</div>
+				</div><br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="isi_form" name="opt_form" id="opt_form">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default isi_question" id="isi_question1">
+				<div class="panel-body">
+					<td style="vertical-align: middle;"><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none"></td>
+					<div class="form-group"><label class="col-lg-2 control-label text-right" for="nm_form">Question</label>
+						<div class="col-lg-6"><input type="text" id="nm_form" name="nm_form[]" class="form-control">
+						</div>
+						<div class="col-lg-4"><select name="tipe_data[]" class="tipe_data" id="tipe_data">
+							<option value="">Choose Data Type</option>
+							<option value="string">STRING</option>
+							<option value="int">INT</option>
+							<option value="datetime">DATETIME</option>
+						</select>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="panel-body text-center">
+				<button class="btn btn-success btn-sm add_question" name="add_question" id="question1" title="Add Question"><i class="fa fa-plus"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="panel-body text-center">
+	<button class="btn btn-danger btn-sm" name="add_section" id="add_section" title="Add Section"><i class="fa fa-plus"></i> Add New Section</button>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

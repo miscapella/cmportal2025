@@ -1,0 +1,108 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2025-03-21 11:44:29
+         compiled from "ui\theme\softhash\prog\HRD\tambah-analitik.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:206065484567dcedba0db9f8-90696880%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'bf9e3700620f83dd8b4591628d5d579b63d45f32' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\tambah-analitik.tpl',
+      1 => 1742532268,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '206065484567dcedba0db9f8-90696880',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_67dcedba10c343_66136175',
+  'variables' => 
+  array (
+    '_L' => 0,
+    '_url' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_67dcedba10c343_66136175')) {function content_67dcedba10c343_66136175($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <form class="form-horizontal" id="rformanalitik">
+                    <div class="ibox-title">
+                        <button class="btn btn-success" id="tambah"><i class="fa fa-plus"></i> Tambah Item</button>
+                        <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                        <div class="ibox-tools">
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+analitik/list/" class="btn btn-primary btn-xs">Daftar Analitik</a>
+                        </div>
+                    </div>
+                    <div class="ibox-content" id="ibox_form">
+                        <div class="alert alert-danger" id="emsg">
+                            <span id="emsgbody"></span>
+                        </div>
+                        <div class="col-lg-12">
+                            <h1 class="text-center">Detail Analitik</h1>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label" for="nama_analitik"><span style="color: red;">*</span> Nama Analitik</label>
+                            <div class="col-lg-9">
+                                <input type="text" id="nama_analitik" name="nama_analitik" class="form-control" placeholder="Nama analitik">
+                            </div>
+                        </div>
+                        <div id="analitik" style="margin-top: 64px; display: flex; flex-direction: column; gap: 64px;">
+                            <div id="analitik-1">
+                                <div class="col-lg-12 relative">
+                                    <h2 class="text-center">Analitik 1</h2>
+                                    <button class='btn btn-danger btn-xs hapus-analitik' style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);"><i class='fa fa-trash'></i> Hapus</button>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="tipe_analitik-1"><span style="color: red;">*</span> Tipe Analitik</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control select" id="tipe_analitik-1" name="tipe_analitik-1">
+                                            <option value="" selected>-- Pilih tipe analitik --</option>
+                                            <option value="pie-chart">Demografi Karyawan</option>
+                                            <option value="pie-chart">BPJS Kesehatan</option>
+                                            <option value="pie-chart">Status Karyawan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="file_analitik-1"><span style="color: red;">*</span> File excel</label>
+                                    <div class="col-lg-9">
+                                        <input type="file" id="file_analitik-1" name="file_analitik-1" class="files">
+                                        <input type="text" id="sfile_analitik-1" name="sfile_analitik-1" style="display: none;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="tipe_analitik-1"><span style="color: red;">*</span> Tipe Grafik</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control select" id="tipe_analitik-1" name="tipe_analitik-1">
+                                            <option value="" selected>-- Pilih tipe grafik --</option>
+                                            <option value="pie-chart">Bar chart</option>
+                                            <option value="pie-chart">Bubble chart</option>
+                                            <option value="pie-chart">Pie chart</option>
+                                            <option value="pie-chart">Line chart</option>
+                                            <option value="pie-chart">Polar Area chart</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group"><label class="col-lg-3 control-label" for="nama_departemen"><span style="color: red;">*</span> Nama Departemen</label>
+                            <div class="col-lg-9"><input type="text" id="nama_departemen" name="nama_departemen" class="form-control" style="text-transform:uppercase" placeholder="Nama Departemen">
+                            </div>
+                        </div> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

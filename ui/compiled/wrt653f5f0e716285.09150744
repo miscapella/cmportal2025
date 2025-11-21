@@ -1,0 +1,96 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-10-30 14:45:18
+         compiled from "ui\theme\softhash\prog\KEBUN\list-po.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:205671591264e71825c39321-61980221%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '3e186127b89dd588ec44ef225e54e976808d6a97' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\KEBUN\\list-po.tpl',
+      1 => 1698651913,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '205671591264e71825c39321-61980221',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_64e71825d4a8d1_40988047',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    '_L' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_64e71825d4a8d1_40988047')) {function content_64e71825d4a8d1_40988047($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form class="form-horizontal" method="post" action="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/list-po/">
+					<div class="form-group">
+						<div class="col-md-8">
+						</div>
+						<div class="col-md-4">
+							<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/add-po/" class="btn btn-success btn-block"><i class="fa fa-plus"></i>  Tambah PO</a>
+						</div>
+					</div>
+				</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+               <h2>PURCHASE ORDER</h2>
+                <table id="datatablepo" class="table table-bordered table-hover sys_table">
+                    <thead>
+                        <tr>
+                            <th style="width: 2%">#</th>
+                            <th style="width: 13%">No. PR</th>
+                            <th style="width: 15%">Tgl PR</th>
+                            <th style="width: 15%">Dibuat Oleh</th>
+                            <th style="width: 15%">Tingkat Kepentingan</th>
+                            <th style="width: 10%">Posisi</th>
+                            <th style="width: 10%">Status</th>
+                            <th class="text-right" style="width: 20%"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Manage'];?>
+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

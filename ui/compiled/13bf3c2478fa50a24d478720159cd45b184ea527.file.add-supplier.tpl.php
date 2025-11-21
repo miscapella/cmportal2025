@@ -1,0 +1,278 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-10-21 16:49:40
+         compiled from "ui\theme\softhash\prog\KEBUN\add-supplier.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1638639828657979bcc5a970-83821859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '13bf3c2478fa50a24d478720159cd45b184ea527' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\KEBUN\\add-supplier.tpl',
+      1 => 1729504050,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1638639828657979bcc5a970-83821859',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_657979bcca7832_52478269',
+  'variables' => 
+  array (
+    '_url' => 0,
+    'daftar_bidang' => 0,
+    'daftar_kode' => 0,
+    'daftar_negara' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_657979bcca7832_52478269')) {function content_657979bcca7832_52478269($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+supplier/list/" class="btn btn-primary btn-xs">Daftar Supplier</a>
+				</div>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <div class="alert alert-danger" id="emsg">
+                    <span id="emsgbody"></span>
+                </div>
+                <form class="form-horizontal" id="rformsupplier">
+                    <div class="col-lg-12"><h1 class="text-center">Detail Supplier</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kode_supplier"><span style="color: red;">*</span> Kode Supplier</label>
+                        <div class="col-lg-9"><input type="text" id="kode_supplier" name="kode_supplier" class="form-control" style="text-transform:uppercase" placeholder="Kode Supplier">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_supplier"><span style="color: red;">*</span> Nama Supplier</label>
+                        <div class="col-lg-9"><input type="text" id="nama_supplier" name="nama_supplier" class="form-control" style="text-transform:uppercase" placeholder="Nama Supplier">
+                        </div>
+                    </div>
+                    <!-- <div class="form-group"><label class="col-lg-3 control-label" for="bidang"><span style="color: red;">*</span> Bidang</label>
+                        <div class="col-lg-9"><input type="text" id="bidang" name="bidang" class="form-control" placeholder="Bidang">
+                        </div>
+                    </div> -->
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bidang"><span style="color: red;">*</span>Bidang</label>
+                        <div class="col-lg-3">
+                            <select class="form-control" id="bidang" name="bidang">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_bidang']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="komoditas"><span style="color: red;">*</span> Komoditas</label>
+                        <div class="col-lg-9"><input type="text" id="komoditas" name="komoditas" class="form-control" placeholder="Komoditas">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="asal"><span style="color: red;">*</span> Asal Supplier</label>
+                        <div class="col-lg-9"><select class="form-control kodetelp" id="asal" name="asal">
+                        <option value="lokal">Lokal</option>
+                        <option value="bukan lokal">Bukan Lokal</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="foto_toko">Foto Toko</label>
+                        <div class="col-lg-9"><input type="file" id="foto_toko" name="foto_toko" class="files">
+                            <input type="text" id="sfoto_toko" name="sfoto_toko" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="telp_toko">Telepon Toko</label>
+                        <div class="col-lg-2">
+                            <select class="form-control kodetelp" id="kode_telp_toko" name="kode_telp_toko">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_kode']->value;?>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-2"><input type="text" id="area_telp_toko" name="area_telp_toko" class="form-control" placeholder="Kode Area">
+                        </div>
+                        <div class="col-lg-5"><input type="text" id="telp_toko" name="telp_toko" class="form-control" placeholder="Nomor Telepon Toko">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="hp_toko">Nomor HP Toko</label>
+                        <div class="col-lg-2">
+                            <select class="form-control kodetelp" id="kode_hp_toko" name="kode_hp_toko">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_kode']->value;?>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-7"><input type="text" id="hp_toko" name="hp_toko" class="form-control" placeholder="Nomor HP Toko">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="email">Email</label>
+                        <div class="col-lg-9"><input type="text" id="email" name="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="website">Website</label>
+                        <div class="col-lg-9"><input type="text" id="website" name="website" class="form-control" placeholder="Website">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_mulai_kerjasama">Tanggal Mulai Kerjasama</label>
+                        <div class="col-lg-9"><input type="text" id="tgl_mulai_kerjasama" name="tgl_mulai_kerjasama" class="form-control tgl" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" placeholder="dd-mm-yyyy">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="lama_pembayaran">Lama Pembayaran (Hari)</label>
+                        <div class="col-lg-9"><input type="number" id="lama_pembayaran" name="lama_pembayaran" class="form-control" value=0>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="rekomendasi_dari">Rekomendasi Dari</label>
+                        <div class="col-lg-9"><input type="text" id="rekomendasi_dari" name="rekomendasi_dari" class="form-control" placeholder="Rekomendasi Dari">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nib">NIB (Nomor Induk Berusaha)</label>
+                        <div class="col-lg-9"><input type="text" id="nib" name="nib" class="form-control" placeholder="NIB">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="file_nib">File NIB</label>
+                        <div class="col-lg-9"><input type="file" id="file_nib" name="file_nib" class="files">
+                            <input type="text" id="sfile_nib" name="sfile_nib" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="npwp">NPWP (Nomor Pokok Wajib Pajak)</label>
+                        <div class="col-lg-9"><input type="text" id="npwp" name="npwp" class="form-control" placeholder="NPWP">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="file_npwp">File NPWP</label>
+                        <div class="col-lg-9"><input type="file" id="file_npwp" name="file_npwp" class="files">
+                            <input type="text" id="sfile_npwp" name="sfile_npwp" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="file_kontrak">File Kontrak</label>
+                        <div class="col-lg-9"><input type="file" id="file_kontrak" name="file_kontrak" class="files">
+                            <input type="text" id="sfile_kontrak" name="sfile_kontrak" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Detail Alamat</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="negara">Negara</label>
+                        <div class="col-lg-3">
+                            <select class="form-control kodetelp" id="negara" name="negara">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_negara']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="provinsi">Provinsi</label>
+                        <div class="col-lg-3"><input type="text" id="provinsi" name="provinsi" class="form-control" placeholder="provinsi">
+                        </div>
+                        <label class="col-lg-2 control-label" for="kota">Kota</label>
+                        <div class="col-lg-4"><input type="text" id="kota" name="kota" class="form-control" placeholder="kota">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kelurahan">Kelurahan</label>
+                        <div class="col-lg-3"><input type="text" id="kelurahan" name="kelurahan" class="form-control" placeholder="Kelurahan">
+                        </div>
+                        <label class="col-lg-2 control-label" for="kecamatan">Kecamatan</label>
+                        <div class="col-lg-4"><input type="text" id="kecamatan" name="kecamatan" class="form-control" placeholder="Kecamatan">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kotamadya">kotamadya / Kabupaten</label>
+                        <div class="col-lg-3"><input type="text" id="kotamadya" name="kotamadya" class="form-control" placeholder="Kotamadya">
+                        </div>
+                        <label class="col-lg-2 control-label" for="rtrw">RT / RW</label>
+                        <div class="col-lg-4"><input type="text" id="rtrw" name="rtrw" class="form-control" placeholder="RT / RW">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="alamat">Alamat</label>
+                        <div class="col-lg-9"><input type="text" id="alamat" name="alamat" class="form-control" placeholder="Alamat">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nomor_gedung">Nomor Gedung</label>
+                        <div class="col-lg-3"><input type="text" id="nomor_gedung" name="nomor_gedung" class="form-control" placeholder="Nomor Gedung">
+                        </div>
+                        <label class="col-lg-2 control-label" for="kode_pos">Kode Pos</label>
+                        <div class="col-lg-4"><input type="text" id="kode_pos" name="kode_pos" class="form-control" placeholder="Kode Pos">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="link_maps">Link Google Map</label>
+                        <div class="col-lg-9"><input type="text" id="link_maps" name="link_maps" class="form-control" placeholder="Link Google Map">
+                        </div>  
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Detail Contact</h1></div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="nik_ktp">NIK KTP</label>
+                        <div class="col-lg-9"><input type="text" id="nik_ktp" name="nik_ktp" class="form-control" placeholder="NIK KTP"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="file_ktp">File KTP</label>
+                        <div class="col-lg-9"><input type="file" id="file_ktp" name="file_ktp" class="files">
+                            <input type="text" id="sfile_ktp" name="sfile_ktp" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_pemilik">Nama Pemilik</label>
+                        <div class="col-lg-9"><input type="text" id="nama_pemilik" name="nama_pemilik" class="form-control" placeholder="Nama Pemilik">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="hp_pemilik">No HP Pemilik</label>
+                        <div class="col-lg-2">
+                            <select class="form-control kodetelp" id="kode_hp_pemilik" name="kode_hp_pemilik">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_kode']->value;?>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-7"><input type="text" id="hp_pemilik" name="hp_pemilik" class="form-control" placeholder="Nomor HP Pemilik">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_contact">Nama Contact</label>
+                        <div class="col-lg-9"><input type="text" id="nama_contact" name="nama_contact" class="form-control" placeholder="Nama Contact">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="hp_contact">No HP Contact</label>
+                        <div class="col-lg-2">
+                            <select class="form-control kodetelp" id="kode_hp_contact" name="kode_hp_contact">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_kode']->value;?>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-7"><input type="text" id="hp_contact" name="hp_contact" class="form-control" placeholder="Nomor HP Contact">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_emergency">Nama Emergency Contact</label>
+                        <div class="col-lg-9"><input type="text" id="nama_emergency" name="nama_emergency" class="form-control" placeholder="Nama Emergency Contact">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="hp_emergency">No HP Emergency</label>
+                        <div class="col-lg-2">
+                            <select class="form-control kodetelp" id="kode_hp_emergency" name="kode_hp_emergency">
+                                <?php echo $_smarty_tpl->tpl_vars['daftar_kode']->value;?>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-7"><input type="text" id="hp_emergency" name="hp_emergency" class="form-control" placeholder="Nomor HP Emergency">
+                        </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Detail Rekening</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bank">Nama Bank</label>
+                        <div class="col-lg-9"><input type="text" id="bank" name="bank" class="form-control" placeholder="Nama Bank">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_rekening">Nomor Rekening</label>
+                        <div class="col-lg-9"><input type="text" id="no_rekening" name="no_rekening" class="form-control"  placeholder="Nomor Rekening">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="an_rekening">Atas Nama Rekening</label>
+                        <div class="col-lg-9"><input type="text" id="an_rekening" name="an_rekening" class="form-control" placeholder="Atas Nama Rekening">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

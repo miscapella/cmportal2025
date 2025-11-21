@@ -1,0 +1,386 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-06 11:22:06
+         compiled from "ui\theme\softhash\prog\HRD\edit-karyawan.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1629861549665ed861e5ea02-21409804%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '32f7496890c43a486bb49acc9dccfa9b88e7d079' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\edit-karyawan.tpl',
+      1 => 1717647566,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1629861549665ed861e5ea02-21409804',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_665ed861ebe701_46324099',
+  'variables' => 
+  array (
+    '_url' => 0,
+    'cid' => 0,
+    'd' => 0,
+    'departemen' => 0,
+    'id_jabatan' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_665ed861ebe701_46324099')) {function content_665ed861ebe701_46324099($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+karyawan/list/" class="btn btn-primary btn-xs">Daftar Karyawan</a>
+				</div>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <div class="alert alert-danger" id="emsg">
+                    <span id="emsgbody"></span>
+                </div>
+                <form class="form-horizontal" id="rformkaryawan">
+                    <input type="hidden" name="cid" id="cid" value="<?php echo $_smarty_tpl->tpl_vars['cid']->value;?>
+">
+                    <div class="col-lg-12"><h1 class="text-center">New Employee Wizard</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_id"> Employee Id</label>
+                        <div class="col-lg-9"><input type="text" id="employee_id" name="employee_id" class="form-control" placeholder="Employee Id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['emp_id'];?>
+" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_name"> Employee Name</label>
+                        <div class="col-lg-9"><input type="text" id="employee_name" name="employee_name" class="form-control" placeholder="Employee Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['emp_name'];?>
+" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="first_name"><span style="color: red;">*</span> First Name</label>
+                        <div class="col-lg-9"><input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['emp_fname'];?>
+">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="middle_name"> Middle Name</label>
+                      <div class="col-lg-9"><input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Middle Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['emp_mname'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="last_name"> Last Name</label>
+                      <div class="col-lg-9"><input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['emp_lname'];?>
+">
+                      </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Personal Info</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="person_id"> Person Id</label>
+                      <div class="col-lg-9"><input type="text" id="person_id" name="person_id" class="form-control" placeholder="Person Id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['person_id'];?>
+" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="picture"> Picture</label>
+                      <div class="col-lg-9"><input type="text" id="picture" name="picture" class="form-control" placeholder="Picture" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['picture'];?>
+" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="user_id"><span style="color: red;">*</span> User Id</label>
+                      <div class="col-lg-9"><input type="text" id="user_id" name="user_id" class="form-control" placeholder="User Id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['user_id'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="role_group_id"><span style="color: red;">*</span> Role Group ID</label>
+                        <div class="col-lg-9">
+                            <select class="form-control rolegroup" id="role_group_id" name="role_group_id">
+                                <?php echo $_smarty_tpl->tpl_vars['departemen']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="place_of_birth"><span style="color: red;">*</span> Place of Birth</label>
+                      <div class="col-lg-9"><input type="text" id="place_of_birth" name="place_of_birth" class="form-control" placeholder="Place of Birth" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['place_of_birth'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="date_of_birth"><span style="color: red;">*</span> Date of Birth</label>
+                      <div class="col-lg-9"><input type="date" id="date_of_birth" name="date_of_birth" class="form-control" placeholder="Date of Birth" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['date_of_birth'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="gender"><span style="color: red;">*</span> Gender</label>
+                        <div class="col-lg-9"><select class="form-control kodetelp" id="gender" name="gender">
+                        <option value="male" <?php if ($_smarty_tpl->tpl_vars['d']->value['gender']=="male"){?>selected<?php }?>>Male</option>
+                        <option value="female" <?php if ($_smarty_tpl->tpl_vars['d']->value['gender']=="female"){?>selected<?php }?>>Female</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="marital"><span style="color: red;">*</span> Marital Status</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="marital" name="marital">
+                      <option value="single" <?php if ($_smarty_tpl->tpl_vars['d']->value['marital_status']=="single"){?>selected<?php }?>>Single</option>
+                      <option value="menikah" <?php if ($_smarty_tpl->tpl_vars['d']->value['marital_status']=="menikah"){?>selected<?php }?>>Menikah</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="religion"><span style="color: red;">*</span> Religion</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="religion" name="religion">
+                      <option value="islam" <?php if ($_smarty_tpl->tpl_vars['d']->value['religion']=="islam"){?>selected<?php }?>>Islam</option>
+                      <option value="kristen" <?php if ($_smarty_tpl->tpl_vars['d']->value['religion']=="kristen"){?>selected<?php }?>>Kristen</option>
+                      <option value="buddha" <?php if ($_smarty_tpl->tpl_vars['d']->value['religion']=="buddha"){?>selected<?php }?>>Buddha</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="blood_type"> Blood Type</label>
+                      <div class="col-lg-9"><input type="text" id="blood_type" name="blood_type" class="form-control" placeholder="Blood Type" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['blood_type'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="citizenship"> Citizenship</label>
+                      <div class="col-lg-9"><input type="text" id="citizenship" name="citizenship" class="form-control" placeholder="Citizenship" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['citizenship'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="mobile_number"> Mobile Number</label>
+                      <div class="col-lg-9"><input type="text" id="mobile_number" name="mobile_number" class="form-control" placeholder="Mobile Number" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['mobile_number'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="email"> Email</label>
+                      <div class="col-lg-9"><input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['email'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="social_insurance_no"> Social Insurance No</label>
+                      <div class="col-lg-9"><input type="text" id="social_insurance_no" name="social_insurance_no" class="form-control" placeholder="Social Insurance No" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['social_insurance_no'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="social_insurance_join_date"> Social Insurance Join Date</label>
+                      <div class="col-lg-9"><input type="date" id="social_insurance_join_date" name="social_insurance_join_date" class="form-control" placeholder="Social Insurance Join Date" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['social_insurance_join_date'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bpjs_kesehatan_no"> BPJS Kesehatan No</label>
+                      <div class="col-lg-9"><input type="text" id="bpjs_kesehatan_no" name="bpjs_kesehatan_no" class="form-control" placeholder="BPJS Kesehatan No" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['bpjs_kesehatan_no'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bpjs_kesehatan_join_date"> BPJS Kesehatan Join Date</label>
+                      <div class="col-lg-9"><input type="date" id="bpjs_kesehatan_join_date" name="bpjs_kesehatan_join_date" class="form-control" placeholder="BPJS Kesehatan Join Date" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['bpjs_kesehatan_join_date'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="faskes_code"> Faskes Code</label>
+                      <div class="col-lg-9"><input type="text" id="faskes_code" name="faskes_code" class="form-control" placeholder="Faskes Code" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['faskes_code'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="faskes_name"> Faskes Name</label>
+                      <div class="col-lg-9"><input type="text" id="faskes_name" name="faskes_name" class="form-control" placeholder="Faskes Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['faskes_name'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kelas_rawat"> Kelas Rawat</label>
+                      <div class="col-lg-9"><input type="text" id="kelas_rawat" name="kelas_rawat" class="form-control" placeholder="Kelas Rawat" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kelas_rawat'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tk_code"> TK Code</label>
+                      <div class="col-lg-9"><input type="text" id="tk_code" name="tk_code" class="form-control" placeholder="TK Code" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['tk_code'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="willingness_to_travel"> Willingness to Travel</label>
+                      <div class="col-lg-9"><input type="checkbox" id="willingness_to_travel" name="willingness_to_travel" <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['d']->value['willingness_to_travel'];?>
+<?php $_tmp1=ob_get_clean();?><?php if ($_tmp1){?>checked<?php }?>>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="entried_date"> Entried Date</label>
+                      <div class="col-lg-9"><input type="text" id="entried_date" name="entried_date" class="form-control" placeholder="Entried Date" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['entried_date'];?>
+" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="entried_by"> Entried By</label>
+                      <div class="col-lg-9"><input type="text" id="entried_by" name="entried_by" class="form-control" placeholder="Entried By" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['entried_by'];?>
+" disabled>
+                      </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Working Info</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_company_id"><span style="color: red;">*</span> Supervisor Company Id</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_company_id" name="supervisor_company_id" class="form-control" placeholder="Supervisor Company Id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['supervisor_company_id'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_id"><span style="color: red;">*</span> Supervisor Id</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_id" name="supervisor_id" class="form-control" placeholder="Supervisor Id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['supervisor_id'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="supervisor_name"> Supervisor Name</label>
+                      <div class="col-lg-9"><input type="text" id="supervisor_name" name="supervisor_name" class="form-control" placeholder="Supervisor Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['supervisor_name'];?>
+" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_category"> Employee Category</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_category" name="employee_category">
+                      <option value="" <?php if ($_smarty_tpl->tpl_vars['d']->value['employee_category']==''){?>selected<?php }?>></option>
+                      <option value="kategori1" <?php if ($_smarty_tpl->tpl_vars['d']->value['employee_category']=="kategori1"){?>selected<?php }?>>Kategori 1</option>
+                      <option value="kategori2" <?php if ($_smarty_tpl->tpl_vars['d']->value['employee_category']=="kategori2"){?>selected<?php }?>>Kategori 2</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_status"><span style="color: red;">*</span> Employee Status</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_status" name="employee_status" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['employee_status'];?>
+">
+                      <option value="active">Active</option>
+                      <option value="inactive">Inactive</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="probation"> Probation (Months)</label>
+                      <div class="col-lg-9"><input type="text" id="probation" name="probation" class="form-control" placeholder="Probation" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['probation'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="employee_type"><span style="color: red;">*</span> Employee Type</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="employee_type" name="employee_type" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['employee_type'];?>
+">
+                      <option value="permanent">Permanent</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="remuneration"><span style="color: red;">*</span> Remuneration Type</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="remuneration" name="remuneration">
+                      <option value="monthly">Monthly</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="absence_card_no"> Absence Card No</label>
+                      <div class="col-lg-9"><input type="text" id="absence_card_no" name="absence_card_no" class="form-control" placeholder="Absence Card No" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['absence_card_no'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="join_date"><span style="color: red;">*</span> Join Date</label>
+                      <div class="col-lg-9"><input type="date" id="join_date" name="join_date" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['join_date'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="grade"> Grade</label>
+                      <div class="col-lg-9"><input type="text" id="grade" name="grade" class="form-control" placeholder="Grade" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['grade'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="organization_id"> Organization Id</label>
+                      <div class="col-lg-9"><input type="text" id="organization_id" name="organization_id" class="form-control" placeholder="Organization Id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['organization_id'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="organization_name"> Organization Name</label>
+                      <div class="col-lg-9"><input type="text" id="organization_name" name="organization_name" class="form-control" placeholder="Organization Name" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['organization_name'];?>
+" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="position_id"> Position Id</label>
+                        <div class="col-lg-9">
+                            <select class="form-control rolegroup" id="position_id" name="position_id">
+                                <?php echo $_smarty_tpl->tpl_vars['id_jabatan']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="position_title"> Position Title</label>
+                      <div class="col-lg-9"><input type="text" id="position_title" name="position_title" class="form-control" placeholder="Position Title" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['position_title'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="company_office"> Company Office</label>
+                      <div class="col-lg-9"><input type="text" id="company_office" name="company_office" class="form-control" placeholder="Company Office" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['company_office'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="note"> Note</label>
+                      <div class="col-lg-9"><input type="text" id="note" name="note" class="form-control" placeholder="Note" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['note'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="work_location"> Work Location</label>
+                      <div class="col-lg-9"><input type="text" id="work_location" name="work_location" class="form-control" placeholder="Work Location" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['work_location'];?>
+">
+                      </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Salary Info</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="npwp_no"> NPWP No</label>
+                      <div class="col-lg-9"><input type="text" id="npwp_no" name="npwp_no" class="form-control" placeholder="NPWP No" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['npwp'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="npwp_submitted_date"> NPWP Submitted Date</label>
+                      <div class="col-lg-9"><input type="date" id="npwp_submitted_date" name="npwp_submitted_date" class="form-control" placeholder="NPWP Submitted Date" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['npwp_submitted_date'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="skip_basic_salary"> Skip Basic Salary</label>
+                      <div class="col-lg-9"><input type="checkbox" id="skip_basic_salary" name="skip_basic_salary" <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['d']->value['skip_basic_salary'];?>
+<?php $_tmp2=ob_get_clean();?><?php if ($_tmp2){?>checked<?php }?>>
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="basic_salary"><span style="color: red;">*</span> Basic Salary</label>
+                      <div class="col-lg-9"><input type="text" id="basic_salary" name="basic_salary" class="form-control" placeholder="Basic Salary" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['basic_salary'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="currency"><span style="color: red;">*</span> Currency</label>
+                      <div class="col-lg-9"><input type="text" id="currency" name="currency" class="form-control" placeholder="Currency" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['currency'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="per"> Per</label>
+                      <div class="col-lg-9"><input type="text" id="per" name="per" class="form-control" placeholder="Per" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['per'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="basic_salary_unit"><span style="color: red;">*</span> Basic Salary Unit</label>
+                      <div class="col-lg-9"><select class="form-control kodetelp" id="basic_salary_unit" name="basic_salary_unit">
+                      <option value="WEEK" <?php if ($_smarty_tpl->tpl_vars['d']->value['basic_salary_unit']=="WEEK"){?>selected<?php }?>>Week</option>
+                      <option value="MONTH" <?php if ($_smarty_tpl->tpl_vars['d']->value['basic_salary_unit']=="MONTH"){?>selected<?php }?> selected>Month</option>
+                      <option value="YEAR" <?php if ($_smarty_tpl->tpl_vars['d']->value['basic_salary_unit']=="YEAR"){?>selected<?php }?>>Year</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="process_method"><span style="color: red;">*</span> Process Method</label>
+                      <div class="col-lg-9"><input type="text" id="process_method" name="process_method" class="form-control" placeholder="Process Method" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['process_method'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="payment_frequency"><span style="color: red;">*</span> Payment Frequency</label>
+                      <div class="col-lg-9"><input type="text" id="payment_frequency" name="payment_frequency" class="form-control" placeholder="Payment Frequency" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['payment_frequency'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group basic-salary"><label class="col-lg-3 control-label" for="wage_template"><span style="color: red;">*</span> Wage Template</label>
+                      <div class="col-lg-9"><input type="text" id="wage_template" name="wage_template" class="form-control" placeholder="Wage Template" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['wage_template'];?>
+">
+                      </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="payroll_dependent_allowed"> Payroll Dependent Allowed</label>
+                      <div class="col-lg-9"><input type="checkbox" id="payroll_dependent_allowed" name="payroll_dependent_allowed" <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['d']->value['payroll_dependent_allowed'];?>
+<?php $_tmp3=ob_get_clean();?><?php if ($_tmp3){?>checked<?php }?>>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

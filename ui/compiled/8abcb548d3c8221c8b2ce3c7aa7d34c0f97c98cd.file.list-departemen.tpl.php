@@ -1,0 +1,71 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-05 13:27:40
+         compiled from "ui\theme\softhash\prog\HRD\list-departemen.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12907899616660055cbaf887-32953432%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8abcb548d3c8221c8b2ce3c7aa7d34c0f97c98cd' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\list-departemen.tpl',
+      1 => 1717568407,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12907899616660055cbaf887-32953432',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6660055cc009d4_69948594',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6660055cc009d4_69948594')) {function content_6660055cc009d4_69948594($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+	<div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+		<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+departemen/add/" class="btn btn-success btn-block"><i class="fa fa-plus"></i>  Tambah Departemen</a>			
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="card-body panel-body">
+                <table id="datatable" class="table table-bordered table-hover sys_table">
+                    <thead>
+                    <tr>
+                        <th width="3%">#</th>
+                        <th width="20%">Kode Departemen</th>
+                        <th width="50%">Nama Departemen</th>
+                        <th width="27%" class="text-right"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Manage'];?>
+</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

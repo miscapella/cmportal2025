@@ -1,0 +1,193 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-05-17 08:56:24
+         compiled from "ui\theme\softhash\users-edit.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:22999335263032faf7470d2-61093835%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '79bc735a408be2938cf5a27ef7cbe1b5317cd193' => 
+    array (
+      0 => 'ui\\theme\\softhash\\users-edit.tpl',
+      1 => 1684288581,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '22999335263032faf7470d2-61093835',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_63032faf7956e8_32250711',
+  'variables' => 
+  array (
+    'user' => 0,
+    '_url' => 0,
+    'd' => 0,
+    '_L' => 0,
+    'department' => 0,
+    'e' => 0,
+    'supervisor' => 0,
+    '_url1' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_63032faf7956e8_32250711')) {function content_63032faf7956e8_32250711($_smarty_tpl) {?>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content" id="sysfrm_ajaxrender">
+                <?php if (_auth2('EDIT-USER',$_smarty_tpl->tpl_vars['user']->value['id'])){?>
+                <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+settings/users" class="btn btn-xs btn-success"> Manage User</a>
+                <?php }?>
+                <form class="form-profile" role="form" name="accadd" method="post" action="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+settings/users-edit-post">
+                    <div class="row">
+                        <div class="form-group">
+
+                            <div id="croppic" style="margin-left:auto;margin-right:auto; max-width: 180px; max-height: 180px">
+                            <?php if ($_smarty_tpl->tpl_vars['d']->value['img']!=''){?>
+                                <img id="img-profile" src="<?php echo $_smarty_tpl->tpl_vars['d']->value['img'];?>
+" class="img-circle" style="max-width: 180px;margin-left:auto;margin-right:auto;display:block" alt="<?php echo $_smarty_tpl->tpl_vars['d']->value['fullname'];?>
+">
+                            <?php }?>
+                            </div>
+
+                            <div style="text-align: center;">
+                                
+                                <button type="button" id="cropContainerHeaderButton" class="btn btn-info" style="margin: 0px;">
+                                <?php if ($_smarty_tpl->tpl_vars['d']->value['img']!=''){?>
+                                Change Profile Picture
+                                <?php }else{ ?>
+                                Upload Profile Picture
+                                <?php }?>
+                                </button>
+                                <?php if ($_smarty_tpl->tpl_vars['d']->value['img']!=''){?>
+                                <button type="button" id="no_image" class="btn btn-default">Remove Profile Picture</button>
+                                <?php }?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="tess">
+                        <div class="form-group col-md-3">
+                            <label for="username"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Username'];?>
+</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control" id="username" name="username" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['username'];?>
+" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="fullname"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Full Name'];?>
+</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control" id="fullname" name="fullname" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['fullname'];?>
+">
+                        </div>
+                    </div>
+
+                    <?php if (_auth2('EDIT-MANAGE-USER',$_smarty_tpl->tpl_vars['user']->value['id'])){?>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="user_type">User <?php echo $_smarty_tpl->tpl_vars['_L']->value['Type'];?>
+</label>
+                        </div>
+                        <div class="form-group col-md-3" style="padding-left: 25px;">
+                            <select name="user_type" id="user_type" class="form-control">
+                                <option value="Admin" <?php if ($_smarty_tpl->tpl_vars['d']->value['user_type']=='Admin'){?>selected="selected" <?php }?>><?php echo $_smarty_tpl->tpl_vars['_L']->value['Full Administrator'];?>
+</option>
+                                <option value="Employee" <?php if ($_smarty_tpl->tpl_vars['d']->value['user_type']=='Employee'){?>selected="selected" <?php }?>><?php echo $_smarty_tpl->tpl_vars['_L']->value['Employee'];?>
+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="department">Department</label>
+                        </div>
+                        <div class="form-group col-md-3" style="padding-left: 25px;">
+                            <select name="department" id="department" class="form-control">
+                                <option value="">Pilih Department</option>
+                                <?php echo $_smarty_tpl->tpl_vars['department']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="atasan">Pimpinan</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control" id="atasan" name="atasan" value="<?php echo $_smarty_tpl->tpl_vars['e']->value['atasan'];?>
+" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="supervisor">Supervisor</label>
+                        </div>
+                        <div class="form-group col-md-3" style="padding-left: 25px;">
+                            <select name="supervisor" id="supervisor" class="form-control">
+                                <option value="">Pilih Supervisor</option>
+                                <?php echo $_smarty_tpl->tpl_vars['supervisor']->value;?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <?php }else{ ?>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="nama_dept">Department</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="hidden" name="department" value="<?php echo $_smarty_tpl->tpl_vars['e']->value['kode_dept'];?>
+">
+                            <input type="text" class="form-control" id="nama_dept" name="nama_dept" value="<?php echo $_smarty_tpl->tpl_vars['e']->value['nama_dept'];?>
+" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="atasan">Pimpinan</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="hidden" name="atasan" value="<?php echo $_smarty_tpl->tpl_vars['e']->value['atasan'];?>
+">
+                            <input type="text" class="form-control" id="nama_atasan" name="nama_atasan" value="<?php echo $_smarty_tpl->tpl_vars['e']->value['atasan'];?>
+" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="nama_supervisor">Supervisor</label>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <input type="hidden" name="supervisor" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['supervisor'];?>
+">
+                            <input type="text" class="form-control" id="nama_supervisor" name="nama_supervisor" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['supervisor'];?>
+" readonly>
+                        </div>
+                    </div>
+                    <?php }?>
+                    <div class="form-group" style="visibility: hidden">
+                        <label for="picture"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Picture'];?>
+</label>
+                        <input type="text" class="form-control picture" id="picture" readonly name="picture" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['img'];?>
+">
+                    </div>
+                    <input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['id'];?>
+">
+                    <input type="hidden" id="_url1" value="<?php echo $_smarty_tpl->tpl_vars['_url1']->value;?>
+">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

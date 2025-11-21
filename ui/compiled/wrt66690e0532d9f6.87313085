@@ -1,0 +1,189 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-12 09:55:01
+         compiled from "ui\theme\softhash\prog\HRD\struktur-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:205872124266690d61cc0fd8-91816880%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '7caa7a47d920db433a8fbb848141acc836b100da' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\struktur-organisasi.tpl',
+      1 => 1718160899,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '205872124266690d61cc0fd8-91816880',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_66690d61d18973_80049850',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_66690d61d18973_80049850')) {function content_66690d61d18973_80049850($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+	<div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+		<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+struktur-organisasi/add/" class="btn btn-success btn-block"><i class="fa fa-plus"></i>  Tambah Organisasi</a>			
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="just-padding">
+            <div class="list-group list-group-root well">
+                <span id="l-item-1" class="list-group-item">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Item 1
+                    <span class="buttons">
+                        <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Detail</a>
+			            <a href="[url]pembelian/edit-spmk-supplier/[id]/" class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o"></i> Revisi</a>
+			            <a class="btn btn-danger btn-xs cdelete" id="uid[id]"><i class="fa fa-trash"></i> Cancel</a>
+                    </span>
+                </span>
+                <div class="list-group collapse" id="item-1">
+                    <span id="l-item-1-1" class="list-group-item">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 1-1
+                        <span class="buttons">
+                            <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Detail</a>
+			                <a href="[url]pembelian/edit-spmk-supplier/[id]/" class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o"></i> Revisi</a>
+			                <a class="btn btn-danger btn-xs cdelete" id="uid[id]"><i class="fa fa-trash"></i> Cancel</a>
+                        </span>
+                    </span>
+                    <div class="list-group collapse" id="item-1-1">
+                        <span id="l-item-1-1-1" class="list-group-item">
+                            <i class="glyphicon glyphicon-chevron-right"></i>Item 1-1-1
+                            <span class="buttons">
+                                <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Detail</a>
+			                    <a href="[url]pembelian/edit-spmk-supplier/[id]/" class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o"></i> Revisi</a>
+			                    <a class="btn btn-danger btn-xs cdelete" id="uid[id]"><i class="fa fa-trash"></i> Cancel</a>
+                            </span>
+                        </span>
+                        <div class="list-group collapse" id="item-1-1-1">
+                            <span id="l-item-1-1-1-1" class="list-group-item">
+                                Item 1-1-1-1
+                                <span class="buttons">
+                                    <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Detail</a>
+			                        <a href="[url]pembelian/edit-spmk-supplier/[id]/" class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o"></i> Revisi</a>
+			                        <a class="btn btn-danger btn-xs cdelete" id="uid[id]"><i class="fa fa-trash"></i> Cancel</a>
+                                </span>
+                            </span>
+                        </div>
+
+                        <a href="#" class="list-group-item">
+                            Item 1.1.2
+                            <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs buttons"><i class="fa fa-book"></i> Detail</a>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            Item 1.1.3
+                            <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs buttons"><i class="fa fa-book"></i> Detail</a>
+                        </a>
+                    </div>
+
+                    <a href="#item-1-2" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 1.2
+                    </a>
+                    <div class="list-group collapse" id="item-1-2">
+                        <a href="#" class="list-group-item">Item 1.2.1</a>
+                        <a href="#" class="list-group-item">Item 1.2.2</a>
+                        <a href="#" class="list-group-item">Item 1.2.3</a>
+                    </div>
+
+                    <a href="#item-1-3" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 1.3
+                    </a>
+                    <div class="list-group collapse" id="item-1-3">
+                        <a href="#" class="list-group-item">Item 1.3.1</a>
+                        <a href="#" class="list-group-item">Item 1.3.2</a>
+                        <a href="#" class="list-group-item">Item 1.3.3</a>
+                    </div>
+                </div>
+
+                <span id="l-item-2" class="list-group-item">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Item 1
+                    <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs buttons"><i class="fa fa-book"></i> Detail</a>
+                </span>
+                <div class="list-group collapse" id="item-2">
+                    <a href="#item-2-1" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 2.1
+                    </a>
+                    <div class="list-group collapse" id="item-2-1">
+                        <a href="#" class="list-group-item">Item 2.1.1</a>
+                        <a href="#" class="list-group-item">Item 2.1.2</a>
+                        <a href="#" class="list-group-item">Item 2.1.3</a>
+                    </div>
+
+                    <a href="#item-2-2" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 2.2
+                    </a>
+                    <div class="list-group collapse" id="item-2-2">
+                        <a href="#" class="list-group-item">Item 2.2.1</a>
+                        <a href="#" class="list-group-item">Item 2.2.2</a>
+                        <a href="#" class="list-group-item">Item 2.2.3</a>
+                    </div>
+
+                    <a href="#item-2-3" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 2.3
+                    </a>
+                    <div class="list-group collapse" id="item-2-3">
+                        <a href="#" class="list-group-item">Item 2.3.1</a>
+                        <a href="#" class="list-group-item">Item 2.3.2</a>
+                        <a href="#" class="list-group-item">Item 2.3.3</a>
+                    </div>
+                </div>
+
+
+                <span id="l-item-3" class="list-group-item">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Item 1
+                    <a href="[url]pembelian/detail-spmk/[id]/" class="btn btn-success btn-xs buttons"><i class="fa fa-book"></i> Detail</a>
+                </span>
+                <div class="list-group collapse" id="item-3">
+                    <a href="#item-3-1" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 3.1
+                    </a>
+                    <div class="list-group collapse" id="item-3-1">
+                        <a href="#" class="list-group-item">Item 3.1.1</a>
+                        <a href="#" class="list-group-item">Item 3.1.2</a>
+                        <a href="#" class="list-group-item">Item 3.1.3</a>
+                    </div>
+
+                    <a href="#item-3-2" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 3.2
+                    </a>
+                    <div class="list-group collapse" id="item-3-2">
+                        <a href="#" class="list-group-item">Item 3.2.1</a>
+                        <a href="#" class="list-group-item">Item 3.2.2</a>
+                        <a href="#" class="list-group-item">Item 3.2.3</a>
+                    </div>
+
+                    <a href="#item-3-3" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 3.3
+                    </a>
+                    <div class="list-group collapse" id="item-3-3">
+                        <a href="#" class="list-group-item">Item 3.3.1</a>
+                        <a href="#" class="list-group-item">Item 3.3.2</a>
+                        <a href="#" class="list-group-item">Item 3.3.3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

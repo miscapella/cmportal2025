@@ -1,0 +1,197 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-14 11:40:13
+         compiled from "ui\theme\softhash\prog\HRD\detail-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1095844893666bc276c6db09-36330132%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e00d2d6285719df3211fb8dc25d6ff9312fcbcdd' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\detail-organisasi.tpl',
+      1 => 1718340011,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1095844893666bc276c6db09-36330132',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_666bc276cc5239_43495616',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'd' => 0,
+    '_url' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_666bc276cc5239_43495616')) {function content_666bc276cc5239_43495616($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body <?php if ($_smarty_tpl->tpl_vars['d']->value['priority']=='URGENT'){?>red-bg<?php }else{ ?>blue-bg<?php }?>">
+			    <div class="col-lg-6"><h3>DETAIL ORGANISASI</h3></div>
+			    <div class="col-lg-6" style="text-align: right"><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+struktur-organisasi/list/" class="btn btn-primary btn-sm">Back</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body detail-pr-head">
+        <!--
+        <div class="form-group">
+          <h1 class="col-lg-3" style="width: 100%">Level <?php echo $_smarty_tpl->tpl_vars['d']->value['level_posisi'];?>
+</h1>
+        </div>
+        -->
+				<div class="form-group"><label class="col-lg-3 control-label" for="id_posisi">Id Posisi</label>
+					<div class="col-lg-9"><input type="text" id="id_posisi" name="id_posisi" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['id_posisi'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="nama_internal">Nama Internal</label>
+					<div class="col-lg-9"><input type="text" id="nama_internal" name="nama_internal" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['nama_internal'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="nama_eksternal">Nama Eksternal</label>
+					<div class="col-lg-9"><input type="text" id="nama_eksternal" name="nama_eksternal" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['nama_eksternal'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="deskripsi">Deskripsi</label>
+					<div class="col-lg-9"><textarea type="text" id="deskripsi" name="deskripsi" class="form-control" rows="5" disabled><?php echo $_smarty_tpl->tpl_vars['d']->value['deskripsi'];?>
+</textarea>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="pekerjaan">Pekerjaan</label>
+					<div class="col-lg-9"><input type="text" id="pekerjaan" name="pekerjaan" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['pekerjaan'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="nama_pekerjaan">Nama Pekerjaan</label>
+					<div class="col-lg-9"><input type="text" id="nama_pekerjaan" name="nama_pekerjaan" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['nama_pekerjaan'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="nilai_posisi">Nilai Posisi</label>
+					<div class="col-lg-9"><input type="text" id="nilai_posisi" name="nilai_posisi" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['nilai_posisi'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="level_posisi">Level Posisi</label>
+					<div class="col-lg-9"><input type="text" id="level_posisi" name="level_posisi" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['level_posisi'];?>
+" disabled></div>
+				</div><br>
+        <div class="form-group"><label class="col-lg-3 control-label" for="valid_dari">Valid Dari</label>
+					<div class="col-lg-9"><input type="text" id="valid_dari" name="valid_dari" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['valid_dari'];?>
+" disabled></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="valid_sampai">Valid Sampai</label>
+					<div class="col-lg-9"><input type="text" id="valid_sampai" name="valid_sampai" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['valid_sampai'];?>
+" disabled>
+					</div>
+				</div><br>
+                <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9">
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+struktur-organisasi/edit/<?php echo $_smarty_tpl->tpl_vars['d']->value['id'];?>
+/" class="btn btn-warning"><i class='fa fa-pencil-square-o'></i> Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div
+        class="panel-body detail-pr-input"
+        style="overflow: auto; white-space: nowrap"
+      >
+        <div class="form-group">Parent</div>
+        <br />
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="parent_id_posisi"
+            >Id Posisi</label
+          ><span class="col-lg-1" style="text-align: right">:</span>
+          <div
+            class="col-lg-9"
+            type="text"
+            id="parent_id_posisi"
+            name="parent_id_posisi"
+            class="form-control"
+          >
+            <?php echo $_smarty_tpl->tpl_vars['d']->value['parent_id_posisi'];?>
+
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="parent_nama_posisi">Nama Posisi</label
+          ><span class="col-lg-1" style="text-align: right">:</span>
+          <div
+            class="col-lg-9"
+            type="text"
+            id="parent_nama_posisi"
+            name="parent_nama_posisi"
+            class="form-control"
+          >
+            <?php echo $_smarty_tpl->tpl_vars['d']->value['parent_nama_posisi'];?>
+
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="parent_valid_dari">Valid Dari</label
+          ><span class="col-lg-1" style="text-align: right">:</span>
+          <div
+            class="col-lg-9"
+            type="date"
+            id="parent_valid_dari"
+            name="parent_valid_dari"
+            class="form-control"
+          >
+            <p><?php echo $_smarty_tpl->tpl_vars['d']->value['parent_valid_dari'];?>
+</p>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="parent_valid_sampai">Valid Sampai</label
+          ><span class="col-lg-1" style="text-align: right">:</span>
+          <div
+            class="col-lg-9"
+            type="date"
+            id="parent_valid_sampai"
+            name="parent_valid_sampai"
+            class="form-control"
+          >
+            <p><?php echo $_smarty_tpl->tpl_vars['d']->value['parent_valid_sampai'];?>
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

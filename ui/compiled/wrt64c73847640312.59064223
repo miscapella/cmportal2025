@@ -1,0 +1,218 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-07-31 11:27:51
+         compiled from "ui\theme\softhash\prog\KEBUN\add-supplier.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:51265063764c736097f0856-61963062%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '13bf3c2478fa50a24d478720159cd45b184ea527' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\KEBUN\\add-supplier.tpl',
+      1 => 1690777667,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '51265063764c736097f0856-61963062',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_64c7360983fac9_73897370',
+  'variables' => 
+  array (
+    '_url' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_64c7360983fac9_73897370')) {function content_64c7360983fac9_73897370($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+supplier/list/" class="btn btn-primary btn-xs">Daftar Supplier</a>
+				</div>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <div class="alert alert-danger" id="emsg">
+                    <span id="emsgbody"></span>
+                </div>
+                <form class="form-horizontal" id="rformsupplier">
+                    <div class="col-lg-12"><h1 class="text-center">Detail Supplier</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kode_supplier"><span style="color: red;">*</span> Kode Supplier</label>
+                        <div class="col-lg-9"><input type="text" id="kode_supplier" name="kode_supplier" class="form-control" style="text-transform:uppercase">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nama_supplier"><span style="color: red;">*</span> Nama Supplier</label>
+                        <div class="col-lg-9"><input type="text" id="nama_supplier" name="nama_supplier" class="form-control" style="text-transform:uppercase">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bidang"><span style="color: red;">*</span> Bidang</label>
+                        <div class="col-lg-9"><input type="text" id="bidang" name="bidang" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="foto_toko">Foto Toko</label>
+                        <div class="col-lg-9"><input type="file" id="foto_toko" name="foto_toko" class="files">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="telp_toko">Kode Area</label>
+                        <div class="col-lg-1"><input type="text" id="telp_toko" name="telp_toko" class="form-control">
+                        </div>
+                        <label class="col-lg-3 control-label" for="telp_toko">Telepon Toko</label>
+                        <div class="col-lg-1">
+                            <select class="form-control kodetelp" id="kode_telp_toko" name="kode_telp_toko">
+                                <option value="62">+ 62 (Indonesia)</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4"><input type="text" id="telp_toko" name="telp_toko" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="hp_toko">Nomor HP Toko</label>
+                        <div class="col-lg-1">
+                            <select class="form-control kodetelp" id="kode_hp_toko" name="kode_hp_toko">
+                                <option value="62">+ 62 (Indonesia)</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-8"><input type="text" id="hp_toko" name="hp_toko" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="email">Email</label>
+                        <div class="col-lg-9"><input type="text" id="email" name="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="website">Website</label>
+                        <div class="col-lg-9"><input type="text" id="website" name="website" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_mulai_kerjasama">Tanggal Mulai Kerjasama</label>
+                        <div class="col-lg-9"><input type="text" id="tgl_mulai_kerjasama" name="tgl_mulai_kerjasama" class="form-control" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="lama_pembayaran">Lama Pembayaran (Hari)</label>
+                        <div class="col-lg-9"><input type="number" id="lama_pembayaran" name="lama_pembayaran" class="form-control" value=0>
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="rekomendasi_dari">Rekomendasi Dari</label>
+                        <div class="col-lg-9"><input type="text" id="rekomendasi_dari" name="rekomendasi_dari" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="nib">NIB</label>
+                        <div class="col-lg-9"><input type="text" id="nib" name="nib" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="npwp">Nomor NPWP</label>
+                        <div class="col-lg-9"><input type="text" id="npwp" name="npwp" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kontrak">File NPWP</label>
+                        <div class="col-lg-9"><input type="file" id="kontrak" name="kontrak" class="files">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kontrak">File Kontrak</label>
+                        <div class="col-lg-9"><input type="file" id="kontrak" name="kontrak" class="files">
+                        </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Detail Alamat</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="alamat">Negara</label>
+                        <div class="col-lg-9"><input type="text" id="alamat" name="alamat" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="alamat">Provinsi</label>
+                        <div class="col-lg-9"><input type="text" id="alamat" name="alamat" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kota">Kota</label>
+                        <div class="col-lg-9"><input type="text" id="kota" name="kota" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kota">Kelurahan</label>
+                        <div class="col-lg-9"><input type="text" id="kota" name="kota" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kota">Kecamatan</label>
+                        <div class="col-lg-9"><input type="text" id="kota" name="kota" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kota">Kotamadya / Kabupaten</label>
+                        <div class="col-lg-9"><input type="text" id="kota" name="kota" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kota">RT / RW</label>
+                        <div class="col-lg-9"><input type="text" id="kota" name="kota" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="alamat">Alamat</label>
+                        <div class="col-lg-9"><input type="text" id="alamat" name="alamat" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="alamat">Nomor Gedung</label>
+                        <div class="col-lg-9"><input type="text" id="alamat" name="alamat" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="alamat">Kode Pos</label>
+                        <div class="col-lg-9"><input type="text" id="alamat" name="alamat" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Detail Contact</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kontrak">File KTP</label>
+                        <div class="col-lg-9"><input type="file" id="kontrak" name="kontrak" class="files">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="pemilik_contact">Nama Pemilik</label>
+                        <div class="col-lg-9"><input type="text" id="pemilik_contact" name="pemilik_contact" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_hp_pemilik">No HP Pemilik</label>
+                        <div class="col-lg-9"><input type="text" id="no_hp_pemilik" name="no_hp_pemilik" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="contact">Nama Contact</label>
+                        <div class="col-lg-9"><input type="text" id="contact" name="contact" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_hp">No HP Contact</label>
+                        <div class="col-lg-9"><input type="text" id="no_hp" name="no_hp" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="emergency_contact">Nama Emergency Contact</label>
+                        <div class="col-lg-9"><input type="text" id="emergency_contact" name="emergency_contact" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_hp_emergency">No HP Emergency</label>
+                        <div class="col-lg-9"><input type="text" id="no_hp_emergency" name="no_hp_emergency" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-12"><h1 class="text-center">Detail Rekening</h1></div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="bank">Nama Bank</label>
+                        <div class="col-lg-9"><input type="text" id="bank" name="bank" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_rekening">No Rekening</label>
+                        <div class="col-lg-9"><input type="text" id="no_rekening" name="no_rekening" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="an_rekening">Atas Nama Rekening</label>
+                        <div class="col-lg-9"><input type="text" id="an_rekening" name="an_rekening" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

@@ -1,0 +1,50 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-11-07 14:31:38
+         compiled from "ui\theme\softhash\prog\UNIT\history-penerimaan.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18737152516549e6288032f2-20198259%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a84ab47b6f8565587c3027c40de9be2ef66bdc56' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\UNIT\\history-penerimaan.tpl',
+      1 => 1699342295,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '18737152516549e6288032f2-20198259',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6549e62884db58_26701869',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6549e62884db58_26701869')) {function content_6549e62884db58_26701869($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table id="datatable" class="table table-bordered table-hover sys_table">
+                    <thead>
+                    <tr>
+                        <th style="width: 2%">#</th>
+                        <th style="width: 15%">TANGGAL INPUT</th>
+                        <th style="width: 15%">NO CHASSIS</th>
+                        <th style="width: 13%">NO ENGINE</th>
+                        <th style="width: 15%">CONFIRM TERIMA BY</th>
+                        <th style="width: 30%">KET TERIMA</th>
+                        
+                        
+                        <th class="text-right" style="width: 10%">ACTION</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

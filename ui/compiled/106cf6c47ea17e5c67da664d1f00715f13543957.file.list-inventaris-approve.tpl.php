@@ -1,0 +1,152 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-03-13 08:16:09
+         compiled from "ui\theme\softhash\prog\GAS\list-inventaris-approve.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1633207009640a94770c3826-10369426%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '106cf6c47ea17e5c67da664d1f00715f13543957' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\list-inventaris-approve.tpl',
+      1 => 1678670165,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1633207009640a94770c3826-10369426',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_640a9477131244_27674483',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    'd' => 0,
+    'opt' => 0,
+    'e' => 0,
+    'ds' => 0,
+    'nourut' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_640a9477131244_27674483')) {function content_640a9477131244_27674483($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>DAFTAR PENGAJUAN PERSETUJUAN ITEM STOCK PADA INVENTARIS</h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+inventaris/list/" class="btn btn-primary btn-sm">Daftar Inventaris</a>
+				</div>
+                <ul style="padding: 0;list-style-type:none">
+                   <li><button class="btn btn-danger btn-sm" name="save" id="save">Simpan</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" id="rform">
+					<input type="hidden" name="kd_inventaris" id="kd_inventaris" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kd_inventaris'];?>
+">
+					<table class="table table-bordered table-hover sys_table">
+						<thead>
+						<tr>
+							<th>#</th>
+							<th>Inventaris</th>
+							<th>Item Stock</th>
+							<th>Satuan Item</th>
+							<th>Jumlah per Satuan</th>
+							<th>Status</th>
+						</tr>
+						</thead>
+						<tbody>
+						<div style="display:none" name="opt" id="opt"><?php echo $_smarty_tpl->tpl_vars['opt']->value;?>
+</div>
+						<?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable(1, null, 0);?>
+						<?php  $_smarty_tpl->tpl_vars['ds'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ds']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['e']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ds']->key => $_smarty_tpl->tpl_vars['ds']->value){
+$_smarty_tpl->tpl_vars['ds']->_loop = true;
+?>
+							<tr>
+								<input type="hidden" id="kd_inventaris[]" name="kd_inventaris[]" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+">
+								<input type="hidden" id="kd_item[]" name="kd_item[]" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+">
+								<td style="vertical-align:middle;"><?php echo $_smarty_tpl->tpl_vars['nourut']->value;?>
+</td>
+								<td style="vertical-align:middle; font-weight: bold;"><a href="#" class="detail-inventaris" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_inventaris'];?>
+"><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none"><?php echo $_smarty_tpl->tpl_vars['ds']->value['nm_inventaris'];?>
+</a></td>
+								<td style="vertical-align:middle; font-weight: bold;"><a href="#" class="detail-itemstock" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_item'];?>
+"><?php echo $_smarty_tpl->tpl_vars['ds']->value['nm_item'];?>
+</a></td>
+								<td style="vertical-align:middle;"><?php echo $_smarty_tpl->tpl_vars['ds']->value['satuan'];?>
+</td>
+								<td style="vertical-align:middle;"><span class="desimal"><?php echo $_smarty_tpl->tpl_vars['ds']->value['jumlah_per_satuan'];?>
+</span> / <?php echo $_smarty_tpl->tpl_vars['ds']->value['satuan_harga'];?>
+</td>
+								<td>
+									<input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+status[]" class="cekbox" id="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+pending" <?php if ($_smarty_tpl->tpl_vars['ds']->value['status']=='pending'){?> checked <?php }?> value="pending"> <label style="font-weight: normal" for="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+pending"> Pending</label><br>
+									<input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+status[]" class="cekbox" id="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+aktif" <?php if ($_smarty_tpl->tpl_vars['ds']->value['status']=='aktif'){?> checked <?php }?> value="aktif"><label style="font-weight: normal" for="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+aktif"> Aktif</label><br>
+									<input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+status[]" class="cekbox" id="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+nonaktif" <?php if ($_smarty_tpl->tpl_vars['ds']->value['status']=='nonaktif'){?> checked <?php }?> value="nonaktif"><label style="font-weight: normal" for="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+nonaktif"> Non Aktif</label>
+								</td>
+							</tr>
+							<?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable($_smarty_tpl->tpl_vars['nourut']->value+1, null, 0);?>
+						<?php } ?>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

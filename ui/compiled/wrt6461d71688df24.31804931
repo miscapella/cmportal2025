@@ -1,0 +1,142 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-05-15 13:54:14
+         compiled from "ui\theme\softhash\prog\FORM\list-response-detail.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:358581549645b062f2a6c35-04074170%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '205e05c10ac28ae0a7ca8571f21471b945e1edd1' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\FORM\\list-response-detail.tpl',
+      1 => 1684133652,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '358581549645b062f2a6c35-04074170',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_645b062f2f29a5_75838530',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    'form' => 0,
+    'd' => 0,
+    'hasil' => 0,
+    'ds' => 0,
+    'tanggal' => 0,
+    'hari' => 0,
+    'waktu' => 0,
+    'pertanyaan' => 0,
+    'item' => 0,
+    'filename' => 0,
+    'panjang' => 0,
+    'lower' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_645b062f2f29a5_75838530')) {function content_645b062f2f29a5_75838530($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'D:\\xampp7.4.8\\htdocs\\cmportal\\sysfrm\\lib\\smarty\\libs\\plugins\\modifier.replace.php';
+?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+	<div class="col-md-12 text-right">
+		<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+response/list-form/" class="btn btn-primary btn-sm"><i class="fa fa-reply"></i> Back</a>
+    </div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+                <div class="col-md-12">
+                    <h1 style="text-align: center;"><?php echo $_smarty_tpl->tpl_vars['form']->value['kode_form'];?>
+ - <?php echo $_smarty_tpl->tpl_vars['form']->value['nama_form'];?>
+</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="hidden" name="kode_form" id="kode_form" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kode_form'];?>
+">
+        <div class="panel panel-default">
+            <div class="panel-body" style="overflow-x: scroll;">
+                <table class="table table-bordered table-hover sys_table">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center; vertical-align: middle;white-space: nowrap;">Kode Form</th>
+                        <th style="text-align: center; vertical-align: middle;white-space: nowrap;">Respondent</th>
+                        <th style="text-align: center; vertical-align: middle;white-space: nowrap;">Tanggal</th>
+                        <th style="text-align: center; vertical-align: middle;white-space: nowrap;">Status</th>
+                        <?php echo $_smarty_tpl->tpl_vars['hasil']->value;?>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php  $_smarty_tpl->tpl_vars['ds'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ds']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['d']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ds']->key => $_smarty_tpl->tpl_vars['ds']->value){
+$_smarty_tpl->tpl_vars['ds']->_loop = true;
+?>
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle;white-space: nowrap;"><?php echo $_smarty_tpl->tpl_vars['ds']->value['kode_form'];?>
+</td>
+                            <td style="text-align: center; vertical-align: middle;white-space: nowrap;"><?php echo $_smarty_tpl->tpl_vars['ds']->value['user_id'];?>
+</td>
+                            <td style="text-align: center; vertical-align: middle;white-space: nowrap;">
+                                <?php $_smarty_tpl->tpl_vars['var'] = new Smarty_variable(explode(" ",$_smarty_tpl->tpl_vars['ds']->value['add_date']), null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars['var'] = new Smarty_variable(explode("-",$_smarty_tpl->tpl_vars['tanggal']->value[0]), null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars['var'] = new Smarty_variable(explode(":",$_smarty_tpl->tpl_vars['tanggal']->value[1]), null, 0);?>
+                                <?php echo $_smarty_tpl->tpl_vars['hari']->value;?>
+-<?php echo $_smarty_tpl->tpl_vars['hari']->value[1];?>
+-<?php echo $_smarty_tpl->tpl_vars['hari']->value[0];?>
+ <?php echo $_smarty_tpl->tpl_vars['waktu']->value[0];?>
+:<?php echo $_smarty_tpl->tpl_vars['waktu']->value[1];?>
+
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;white-space: nowrap;"><?php echo $_smarty_tpl->tpl_vars['ds']->value['status'];?>
+</td>
+                            <?php $_smarty_tpl->tpl_vars['pertanyaan'] = new Smarty_variable(explode("|",$_smarty_tpl->tpl_vars['ds']->value['value']), null, 0);?>
+                            <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['pertanyaan']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+?>
+                                <?php $_smarty_tpl->tpl_vars['lower'] = new Smarty_variable(smarty_modifier_replace($_smarty_tpl->tpl_vars['item']->value,'http://192.168.201.180/cmportal/uploads/FORM/',''), null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars['filename'] = new Smarty_variable(explode("http://192.168.201.180/cmportal/uploads/FORM/",$_smarty_tpl->tpl_vars['item']->value), null, 0);?>
+                                <?php $_smarty_tpl->tpl_vars['panjang'] = new Smarty_variable(count($_smarty_tpl->tpl_vars['filename']->value), null, 0);?>
+                                <?php if ($_smarty_tpl->tpl_vars['panjang']->value==2){?>
+                                    <td style="text-align: center; vertical-align: middle;white-space: nowrap;"><a href="http://192.168.201.180/cmportal/uploads/FORM/<?php echo $_smarty_tpl->tpl_vars['lower']->value;?>
+" target="_blank"><?php echo $_smarty_tpl->tpl_vars['lower']->value;?>
+</a></td>
+                                <?php }else{ ?>
+                                    <td style="text-align: center; vertical-align: middle;white-space: nowrap;"><?php echo $_smarty_tpl->tpl_vars['lower']->value;?>
+</td>
+                                <?php }?>
+                                
+                            <?php } ?>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

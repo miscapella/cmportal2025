@@ -1,0 +1,98 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-13 15:56:28
+         compiled from "ui\theme\softhash\prog\HRD\detail-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:896700669666ab3c3b5e7d2-66869728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e00d2d6285719df3211fb8dc25d6ff9312fcbcdd' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\detail-organisasi.tpl',
+      1 => 1718268986,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '896700669666ab3c3b5e7d2-66869728',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_666ab3c3be7950_78125400',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'd' => 0,
+    '_url' => 0,
+    'idate' => 0,
+    '_L' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_666ab3c3be7950_78125400')) {function content_666ab3c3be7950_78125400($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body <?php if ($_smarty_tpl->tpl_vars['d']->value['priority']=='URGENT'){?>red-bg<?php }else{ ?>blue-bg<?php }?>">
+			    <div class="col-lg-6"><h3>DETAIL ORGANISASI</h3></div>
+			    <div class="col-lg-6" style="text-align: right"><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+struktur-organisasi/list/" class="btn btn-primary btn-sm">Back</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body detail-pr-head">
+				<div class="form-group"><label class="col-lg-3 control-label" for="no_spmk">No. SPmK</label>
+					<div class="col-lg-9"><input type="text" id="no_spmk" name="no_spmk" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['no_spmk'];?>
+" disabled></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="tgl_spmk">Tanggal SPmK</label>
+					<div class="col-lg-9"><input type="text" id="idate" name="idate" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['idate']->value;?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="priority">Tingkat Kepentingan</label>
+					<div class="col-lg-9"><input type="text" id="priority" name="priority" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['priority'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="status">Status</label>
+					<div class="col-lg-9"><input type="text" id="status" name="status" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['status'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="pesan">Pesan</label>
+					<div class="col-lg-9"><textarea type="text" id="pesan" name="pesan" class="form-control" rows="5"><?php echo $_smarty_tpl->tpl_vars['d']->value['pesan'];?>
+</textarea>
+					</div><br>
+                <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9">
+                      <button class="btn btn-warning" type="submit" id="submit"><i class='fa fa-pencil-square-o'></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Edit'];?>
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

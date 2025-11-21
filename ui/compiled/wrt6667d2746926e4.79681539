@@ -1,0 +1,143 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-11 11:28:36
+         compiled from "ui\theme\softhash\prog\HRD\struktur-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:5538909476667d1c939d327-18460474%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '7caa7a47d920db433a8fbb848141acc836b100da' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\struktur-organisasi.tpl',
+      1 => 1718080104,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '5538909476667d1c939d327-18460474',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_6667d1c93f2952_22423594',
+  'variables' => 
+  array (
+    'msg' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_6667d1c93f2952_22423594')) {function content_6667d1c93f2952_22423594($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="just-padding">
+            <div class="list-group list-group-root well">
+                <a href="#item-1" class="list-group-item" data-toggle="collapse">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Item 1
+                </a>
+                <div class="list-group collapse" id="item-1">
+                    <a href="#item-1-1" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 1.1
+                    </a>
+                    <div class="list-group collapse" id="item-1-1">
+                        <a href="#" class="list-group-item">Item 1.1.1</a>
+                        <a href="#" class="list-group-item">Item 1.1.2</a>
+                        <a href="#" class="list-group-item">Item 1.1.3</a>
+                    </div>
+
+                    <a href="#item-1-2" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 1.2
+                    </a>
+                    <div class="list-group collapse" id="item-1-2">
+                        <a href="#" class="list-group-item">Item 1.2.1</a>
+                        <a href="#" class="list-group-item">Item 1.2.2</a>
+                        <a href="#" class="list-group-item">Item 1.2.3</a>
+                    </div>
+
+                    <a href="#item-1-3" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 1.3
+                    </a>
+                    <div class="list-group collapse" id="item-1-3">
+                        <a href="#" class="list-group-item">Item 1.3.1</a>
+                        <a href="#" class="list-group-item">Item 1.3.2</a>
+                        <a href="#" class="list-group-item">Item 1.3.3</a>
+                    </div>
+                </div>
+
+                <a href="#item-2" class="list-group-item" data-toggle="collapse">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Item 2
+                </a>
+                <div class="list-group collapse" id="item-2">
+                    <a href="#item-2-1" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 2.1
+                    </a>
+                    <div class="list-group collapse" id="item-2-1">
+                        <a href="#" class="list-group-item">Item 2.1.1</a>
+                        <a href="#" class="list-group-item">Item 2.1.2</a>
+                        <a href="#" class="list-group-item">Item 2.1.3</a>
+                    </div>
+
+                    <a href="#item-2-2" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 2.2
+                    </a>
+                    <div class="list-group collapse" id="item-2-2">
+                        <a href="#" class="list-group-item">Item 2.2.1</a>
+                        <a href="#" class="list-group-item">Item 2.2.2</a>
+                        <a href="#" class="list-group-item">Item 2.2.3</a>
+                    </div>
+
+                    <a href="#item-2-3" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 2.3
+                    </a>
+                    <div class="list-group collapse" id="item-2-3">
+                        <a href="#" class="list-group-item">Item 2.3.1</a>
+                        <a href="#" class="list-group-item">Item 2.3.2</a>
+                        <a href="#" class="list-group-item">Item 2.3.3</a>
+                    </div>
+                </div>
+
+
+                <a href="#item-3" class="list-group-item" data-toggle="collapse">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Item 3
+                </a>
+                <div class="list-group collapse" id="item-3">
+                    <a href="#item-3-1" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 3.1
+                    </a>
+                    <div class="list-group collapse" id="item-3-1">
+                        <a href="#" class="list-group-item">Item 3.1.1</a>
+                        <a href="#" class="list-group-item">Item 3.1.2</a>
+                        <a href="#" class="list-group-item">Item 3.1.3</a>
+                    </div>
+
+                    <a href="#item-3-2" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 3.2
+                    </a>
+                    <div class="list-group collapse" id="item-3-2">
+                        <a href="#" class="list-group-item">Item 3.2.1</a>
+                        <a href="#" class="list-group-item">Item 3.2.2</a>
+                        <a href="#" class="list-group-item">Item 3.2.3</a>
+                    </div>
+
+                    <a href="#item-3-3" class="list-group-item" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i>Item 3.3
+                    </a>
+                    <div class="list-group collapse" id="item-3-3">
+                        <a href="#" class="list-group-item">Item 3.3.1</a>
+                        <a href="#" class="list-group-item">Item 3.3.2</a>
+                        <a href="#" class="list-group-item">Item 3.3.3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

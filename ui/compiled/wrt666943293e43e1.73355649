@@ -1,0 +1,128 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-06-12 13:41:45
+         compiled from "ui\theme\softhash\prog\HRD\add-organisasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:70343268466680cce1d1e60-10634021%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'da13124412b97d2be0c482a4c2231ccf2582c223' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\HRD\\add-organisasi.tpl',
+      1 => 1718174503,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '70343268466680cce1d1e60-10634021',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_66680cce200a83_84398108',
+  'variables' => 
+  array (
+    '_url' => 0,
+    'id_posisi' => 0,
+    'nama_posisi' => 0,
+    '_L' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_66680cce200a83_84398108')) {function content_66680cce200a83_84398108($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+karyawan/list/" class="btn btn-primary btn-xs">Daftar Karyawan</a>
+				</div>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <div class="alert alert-danger" id="emsg">
+                    <span id="emsgbody"></span>
+                </div>
+                <form class="form-horizontal" id="rformorganisasi">
+                  <div class="col-lg-12"><h1 class="text-center">Organisasi Baru</h1></div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="id_posisi"><span style="color: red;">*</span> Id Posisi</label>
+                      <div class="col-lg-9"><input type="text" id="id_posisi" name="id_posisi" class="form-control" placeholder="Id Posisi">
+                      </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="nama_internal"><span style="color: red;">*</span> Nama Internal</label>
+                    <div class="col-lg-9"><input type="text" id="nama_internal" name="nama_internal" class="form-control" placeholder="Nama Internal">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="nama_eksternal"> Nama Eksternal</label>
+                    <div class="col-lg-9"><input type="text" id="nama_eksternal" name="nama_eksternal" class="form-control" placeholder="Nama Eksternal">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="deskripsi"> Deskripsi</label>
+                    <div class="col-lg-9"><input type="text" id="deskripsi" name="deskripsi" class="form-control" placeholder="Deskripsi">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="pekerjaan"> Pekerjaan</label>
+                    <div class="col-lg-9"><input type="text" id="pekerjaan" name="pekerjaan" class="form-control" placeholder="Pekerjaan">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="nama_pekerjaan"> Nama Pekerjaan</label>
+                    <div class="col-lg-9"><input type="text" id="nama_pekerjaan" name="nama_pekerjaan" class="form-control" placeholder="Nama Pekerjaan">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="nilai_posisi"> Nilai Posisi</label>
+                    <div class="col-lg-9"><input type="text" id="nilai_posisi" name="nilai_posisi" class="form-control" placeholder="Nilai Posisi">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="level_posisi"> Level Posisi</label>
+                    <div class="col-lg-9"><input type="text" id="level_posisi" name="level_posisi" class="form-control" placeholder="Level Posisi">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="valid_dari"><span style="color: red;">*</span> Valid Dari</label>
+                    <div class="col-lg-9"><input type="date" id="valid_dari" name="valid_dari" class="form-control" placeholder="Valid Dari">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="valid_sampai"><span style="color: red;">*</span> Valid Sampai</label>
+                    <div class="col-lg-9"><input type="date" id="valid_sampai" name="valid_sampai" class="form-control" placeholder="Valid Sampai">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label" for="parent_id_posisi"><span style="color: red;">*</span> Parent Id Posisi</label>
+                    <div class="col-lg-9">
+                      <select class="form-control rolegroup" id="parent_id_posisi" name="parent_id_posisi">
+                        <?php echo $_smarty_tpl->tpl_vars['id_posisi']->value;?>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label" for="parent_nama_posisi"> Parent Nama Posisi</label>
+                    <div class="col-lg-9">
+                      <select class="form-control rolegroup" id="parent_nama_posisi" name="parent_nama_posisi">
+                        <?php echo $_smarty_tpl->tpl_vars['nama_posisi']->value;?>
+
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="parent_valid_dari"><span style="color: red;">*</span> Parent Valid Dari</label>
+                    <div class="col-lg-9"><input type="date" id="parent_valid_dari" name="parent_valid_dari" class="form-control" placeholder="Parent Valid Dari">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-lg-3 control-label" for="parent_valid_sampai"><span style="color: red;">*</span> Parent Valid Sampai</label>
+                    <div class="col-lg-9"><input type="date" id="parent_valid_sampai" name="parent_valid_sampai" class="form-control" placeholder="Parent Valid Sampai">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9">
+                      <button class="btn btn-primary" type="submit" id="submit"><i class="fa fa-check"></i> <?php echo $_smarty_tpl->tpl_vars['_L']->value['Save'];?>
+</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

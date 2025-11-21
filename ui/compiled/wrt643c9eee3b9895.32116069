@@ -1,0 +1,65 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-04-17 08:20:46
+         compiled from "ui\theme\softhash\prog\GAS\lap-pemenuhan-pr.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1182992793643674faa13273-60173660%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '3c7e054fa14e834a78f031be817bac0f1b0f85cd' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\lap-pemenuhan-pr.tpl',
+      1 => 1681694444,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1182992793643674faa13273-60173660',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_643674faa68e32_65404403',
+  'variables' => 
+  array (
+    '_url' => 0,
+    'today' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_643674faa68e32_65404403')) {function content_643674faa68e32_65404403($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Laporan Pemenuhan PR</h5>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal" method="post" action="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+laporan/laporan-pemenuhan-pr/" id="rform">
+                    <div class="form-group">
+                        <label for="dari" class="col-sm-4 control-label">Dari Tanggal</label>
+                        <div class="col-sm-8">
+                            <input type="date" id="dari"name="dari"class="form-control"value="<?php echo $_smarty_tpl->tpl_vars['today']->value;?>
+">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sampai" class="col-sm-4 control-label">Sampai Tanggal</label>
+                        <div class="col-sm-8">
+                            <input type="date" datepicker data-date-format="dd-mm-yyyy" id="sampai"name="sampai"class="form-control"value="<?php echo $_smarty_tpl->tpl_vars['today']->value;?>
+">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button class="btn btn-primary">Display</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>

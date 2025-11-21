@@ -1,0 +1,85 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-11-06 11:09:32
+         compiled from "ui\theme\softhash\prog\UNIT\mutasi-konfirmasi.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1443620224654866e9288355-87755457%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '202a95b2329c5dc51bd5771857cbd95e387f9f92' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\UNIT\\mutasi-konfirmasi.tpl',
+      1 => 1699243769,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1443620224654866e9288355-87755457',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_654866e92bbbe6_63307513',
+  'variables' => 
+  array (
+    '_url' => 0,
+    'd' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_654866e92bbbe6_63307513')) {function content_654866e92bbbe6_63307513($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+
+    <div class="col-lg-8">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Mutasi Konfirmasi</h5>
+				<div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+mutasi/list/" class="btn btn-primary btn-xs">Back</a>
+				</div>
+            </div>
+            <div class="ibox-content" id="ibox_form">
+                <form class="form-horizontal" id="rform">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="alert alert-danger" id="emsg">
+                                <span id="emsgbody"></span>
+                            </div>
+                        </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_chassis">NO CHASSIS</label>
+                        <div class="col-lg-9"><input type="text" id="no_chassis"name="no_chassis"class="form-control"value="<?php echo $_smarty_tpl->tpl_vars['d']->value['NO_CHASSIS'];?>
+" readonly></div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="no_engine">NO ENGINE</label>
+                        <div class="col-lg-9"><input type="text" id="no_engine"name="no_engine"class="form-control"value="<?php echo $_smarty_tpl->tpl_vars['d']->value['NO_ENGINE'];?>
+" readonly></div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="kode_type">KODE TUJUAN</label>
+                        <div class="col-lg-6"><input type="text" id="kode_tujuan"name="kode_tujuan"class="form-control"value="<?php echo $_smarty_tpl->tpl_vars['d']->value['KODE_TUJUAN'];?>
+" readonly></div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_berangkat">DITERIMA</label>
+                        <div class="col-lg-9"><input type="text" id="aksesori"name="aksesori"class="form-control"value=""></div>
+                    </div>
+                    <div class="form-group"><label class="col-lg-3 control-label" for="tgl_berangkat">CATATAN KELUAR UNIT</label>
+                        <div class="col-lg-9"><input type="text" id="keterangan"name="keterangan"class="form-control"value=""></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-9">
+                            <button class="btn btn-warning" type="submit" id="submit"><i class="fa fa-check"></i> Konfirmasi</button>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+                
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

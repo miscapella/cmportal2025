@@ -1,0 +1,400 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2023-04-05 15:07:50
+         compiled from "ui\theme\softhash\prog\GAS\detail-pr-aprvsup.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1670104147642d29de7e78f7-45370671%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'f27a39a172ef22b917a3875804a911f4eef49258' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\detail-pr-aprvsup.tpl',
+      1 => 1680682069,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1670104147642d29de7e78f7-45370671',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_642d29de8861a8_65493283',
+  'variables' => 
+  array (
+    'msg' => 0,
+    'd' => 0,
+    '_url' => 0,
+    'idate' => 0,
+    'e' => 0,
+    'nourut' => 0,
+    'ds' => 0,
+    'tg' => 0,
+    'r' => 0,
+    'nm_inventaris' => 0,
+    'tg1' => 0,
+    'r1' => 0,
+    'nm_item' => 0,
+    'tg3' => 0,
+    'r3' => 0,
+    'jumlah_per_satuan' => 0,
+    'nm_supplier1' => 0,
+    'contact1' => 0,
+    'lama_bayar1' => 0,
+    'harga_kecil1' => 0,
+    'nm_supplier2' => 0,
+    'contact2' => 0,
+    'lama_bayar2' => 0,
+    'harga_kecil2' => 0,
+    'nm_supplier3' => 0,
+    'contact3' => 0,
+    'lama_bayar3' => 0,
+    'harga_kecil3' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_642d29de8861a8_65493283')) {function content_642d29de8861a8_65493283($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body <?php if ($_smarty_tpl->tpl_vars['d']->value['priority']=='MENENGAH'){?>yellow-bg<?php }elseif($_smarty_tpl->tpl_vars['d']->value['priority']=='TINGGI'){?>red-bg<?php }?>">
+			    <div class="col-lg-6"><h3>DETAIL PURCHASE REQUISITION</h3></div>
+			    <div class="col-lg-6" style="text-align: right"><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/list-pr-aprv/" class="btn btn-success btn-sm">Back</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body detail-pr-head">
+				<div class="form-group"><label class="col-lg-3 control-label" for="no_pr">No. PR</label>
+					<div class="col-lg-9"><input type="text" id="no_pr" name="no_pr" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['no_pr'];?>
+" disabled></div>
+				</div><br>
+				<div class="form-group"><label class="col-lg-3 control-label" for="tgl_pr">Tanggal PR</label>
+					<div class="col-lg-9"><input type="text" id="idate" name="idate" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['idate']->value;?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="priority">Tingkat Kepentingan</label>
+					<div class="col-lg-9"><input type="text" id="priority" name="priority" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['priority'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="pembelian">Pembelian</label>
+					<div class="col-lg-9"><input type="text" id="pembelian" name="pembelian" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['pembelian'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="status">Status</label>
+					<div class="col-lg-9"><input type="text" id="status" name="status" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['status'];?>
+" disabled></div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label" for="pesan">Pesan</label>
+					<div class="col-lg-9"><textarea type="text" id="pesan" name="pesan" class="form-control" rows="5"><?php echo $_smarty_tpl->tpl_vars['d']->value['pesan'];?>
+</textarea>
+					</div>
+				</div><br>
+                <div class="form-group"><label class="col-lg-3 control-label">Approval</label>
+					<div class="col-lg-9" style="margin-top: 5px;">
+					    <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/detail-pr-approvesup/" class="btn btn-primary btn-xs" id="approvesup">APPROVE</a>
+					    <a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/detail-pr-reject/" class="btn btn-danger btn-xs" id="reject">REJECT</a>
+					</div>
+				</div><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body detail-pr-input" style="overflow:auto;white-space:nowrap;">
+                <?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable(1, null, 0);?>
+                <?php  $_smarty_tpl->tpl_vars['ds'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ds']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['e']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ds']->key => $_smarty_tpl->tpl_vars['ds']->value){
+$_smarty_tpl->tpl_vars['ds']->_loop = true;
+?>
+                <div>
+                <div class="form-group">
+                    PURCHASE ORDER ITEM #<?php echo $_smarty_tpl->tpl_vars['nourut']->value;?>
+
+				</div><br>
+                <?php $_smarty_tpl->tpl_vars["nm_inventaris"] = new Smarty_variable('', null, 0);?>
+                <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_inventaris']=='STOCK'){?>
+                    <?php $_smarty_tpl->tpl_vars["nm_inventaris"] = new Smarty_variable("STOCK", null, 0);?>
+                <?php }else{ ?>
+                    <?php  $_smarty_tpl->tpl_vars['r'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r']->key => $_smarty_tpl->tpl_vars['r']->value){
+$_smarty_tpl->tpl_vars['r']->_loop = true;
+?>
+                        <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_inventaris']==$_smarty_tpl->tpl_vars['r']->value['kd_inventaris']){?>
+                            <?php $_smarty_tpl->tpl_vars["nm_inventaris"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r']->value['nm_inventaris']), null, 0);?>
+                        <?php }?>
+                    <?php } ?>
+                <?php }?>
+                <td style="vertical-align: middle;"><input type="checkbox" name="chk[]" class="cekbox" checked="checked" style="display:none"></td>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="kd_inventaris">Keperluan</label><span class="col-lg-1" style="text-align: right">:</span>
+					<input style="display: none;" class="col-lg-9" type="text" id="kd_inventaris" name="kd_inventaris[]" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_inventaris'];?>
+" readonly>
+                    <a href="#" class="detail-inventaris col-lg-9" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_inventaris'];?>
+"><?php echo $_smarty_tpl->tpl_vars['nm_inventaris']->value;?>
+</a>
+				</div>
+                <br>
+                <?php $_smarty_tpl->tpl_vars["nm_item"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["merk"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["satuan"] = new Smarty_variable('', null, 0);?>
+                <?php  $_smarty_tpl->tpl_vars['r1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r1']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg1']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r1']->key => $_smarty_tpl->tpl_vars['r1']->value){
+$_smarty_tpl->tpl_vars['r1']->_loop = true;
+?>
+                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_item']==$_smarty_tpl->tpl_vars['r1']->value['kd_item']){?>
+                        <?php $_smarty_tpl->tpl_vars["nm_item"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['nm_item']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["merk"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['merk']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["satuan"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r1']->value['satuan']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["jumlah_per_satuan"] = new Smarty_variable($_smarty_tpl->tpl_vars['r1']->value['jumlah_per_satuan'], null, 0);?>
+                    <?php }?>
+                <?php } ?>
+                <div class="form-group" >
+                    <label class="col-lg-2 control-label" for="kd_item">Item Stock</label><span class="col-lg-1" style="text-align: right">:</span>
+					<input style="display: none;" class="col-lg-9" type="text" id="kd_item" name="kd_item[]" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_item'];?>
+" readonly>
+                    <a href="#" class="col-lg-9 detail-itemstock" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_item'];?>
+"><?php echo $_smarty_tpl->tpl_vars['nm_item']->value;?>
+</a>
+				</div><br>
+                <div class="form-group" >
+					<label class="col-lg-2 control-label" for="qty_req">Qty Req</label><span class="col-lg-1" style="text-align: right">:</span>
+					<input class="col-lg-9 amount" type="text" id="qty_req" name="qty_req" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['qty_req'];?>
+" disabled>
+				</div><br>
+                <div class="form-group" >
+					<label class="col-lg-2 control-label" for="qty_stock">Stock</label><span class="col-lg-1" style="text-align: right">:</span>
+					<input class="col-lg-9 amount" type="text" id="qty_stock" name="qty_stock" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['qty_stock'];?>
+" disabled>
+				</div><br>
+                <div class="form-group" >
+					<label class="col-lg-2 control-label" for="tgl_diperlukan">Tgl Diperlukan</label><span class="col-lg-1" style="text-align: right">:</span>
+					<input class="col-lg-9" type="text" id="tgl_diperlukan" name="tgl_diperlukan" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['tgl_diperlukan'];?>
+" disabled>
+				</div><br>
+                <div class="form-group" ><label class="col-lg-2 control-label" for="keperluan">Keterangan</label><span class="col-lg-1" style="text-align: right">:</span>
+					<input class="col-lg-9" type="text" id="keperluan" name="keperluan" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keperluan'];?>
+" disabled>
+				</div><br>
+                <div class="form-group">
+                    PILIHAN SUPPLIER
+				</div><br>
+                <?php $_smarty_tpl->tpl_vars["nm_supplier1"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["contact1"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["lama_bayar1"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["nm_supplier2"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["contact2"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["lama_bayar2"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["nm_supplier3"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["contact3"] = new Smarty_variable('', null, 0);?>
+                <?php $_smarty_tpl->tpl_vars["lama_bayar3"] = new Smarty_variable('', null, 0);?>
+                <?php  $_smarty_tpl->tpl_vars['r3'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['r3']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['tg3']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['r3']->key => $_smarty_tpl->tpl_vars['r3']->value){
+$_smarty_tpl->tpl_vars['r3']->_loop = true;
+?>
+                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_supplier1']==$_smarty_tpl->tpl_vars['r3']->value['kd_supplier']){?>
+                        <?php $_smarty_tpl->tpl_vars["nm_supplier1"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['nm_supplier']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["contact1"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['contact']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["lama_bayar1"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['lama_bayar']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["harga_kecil1"] = new Smarty_variable($_smarty_tpl->tpl_vars['ds']->value['harga1']/$_smarty_tpl->tpl_vars['jumlah_per_satuan']->value, null, 0);?>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_supplier2']==$_smarty_tpl->tpl_vars['r3']->value['kd_supplier']){?>
+                        <?php $_smarty_tpl->tpl_vars["nm_supplier2"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['nm_supplier']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["contact2"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['contact']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["lama_bayar2"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['lama_bayar']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["harga_kecil2"] = new Smarty_variable($_smarty_tpl->tpl_vars['ds']->value['harga2']/$_smarty_tpl->tpl_vars['jumlah_per_satuan']->value, null, 0);?>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['ds']->value['kd_supplier3']==$_smarty_tpl->tpl_vars['r3']->value['kd_supplier']){?>
+                        <?php $_smarty_tpl->tpl_vars["nm_supplier3"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['nm_supplier']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["contact3"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['contact']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["lama_bayar3"] = new Smarty_variable(((string)$_smarty_tpl->tpl_vars['r3']->value['lama_bayar']), null, 0);?>
+                        <?php $_smarty_tpl->tpl_vars["harga_kecil3"] = new Smarty_variable($_smarty_tpl->tpl_vars['ds']->value['harga3']/$_smarty_tpl->tpl_vars['jumlah_per_satuan']->value, null, 0);?>
+                    <?php }?>
+                <?php } ?>
+                <div class="form-group">
+                    <div class="form-group col-lg-4 <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier1']){?> supplierpilihan <?php }?>" style="border-right: 1px solid #e7eaec;">
+                        <div class="row">
+                            <input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan[]" class="cekbox col-lg-12" <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier1']){?> checked <?php }?> value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_supplier1'];?>
+">
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="supplier1">Supplier 1</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="supplier1" name="supplier1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_supplier1'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="nm_supplier1">Nama</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="nm_supplier1" name="nm_supplier1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['nm_supplier1']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="contact1">Contact</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="contact1" name="contact1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['contact1']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="lama_bayar1">Lama Bayar</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="lama_bayar1" name="lama_bayar1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['lama_bayar1']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="harga1">Harga</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 amount" type="text" id="harga1" name="harga1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['harga1'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="harga_k1">Harga (k)</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 amount" type="text" id="harga_k1" name="harga_k1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['harga_kecil1']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="keterangan_supplier1">Keterangan</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8" type="text" id="keterangan_supplier1" name="keterangan_supplier1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keterangan_supplier1'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="file_supplier1">File</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8" type="text" id="file_supplier1" name="file_supplier1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['file_supplier1'];?>
+" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4 <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier2']){?> supplierpilihan <?php }?>" style="border-right: 1px solid #e7eaec">
+                        <div class="row">
+                            <input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan[]" class="cekbox col-lg-12" <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier2']){?> checked <?php }?> value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_supplier2'];?>
+">
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="supplier2">Supplier 2</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="supplier2" name="supplier2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_supplier2'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="nm_supplier2">Nama</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="nm_supplier2" name="nm_supplier2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['nm_supplier2']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="contact2">Contact</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="contact2" name="contact2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['contact2']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="lama_bayar2">Lama Bayar</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="lama_bayar2" name="lama_bayar2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['lama_bayar2']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="harga2">Harga</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 amount" type="text" id="harga2" name="harga2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['harga2'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="harga_k2">Harga (k)</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 amount" type="text" id="harga_k2" name="harga_k2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['harga_kecil2']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="keterangan_supplier2">Keterangan</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8" type="text" id="keterangan_supplier2" name="keterangan_supplier2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keterangan_supplier2'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="file_supplier2">File</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8" type="text" id="file_supplier2" name="file_supplier2" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['file_supplier2'];?>
+" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4 <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier3']){?> supplierpilihan <?php }?>">
+                        <div class="row">
+                            <input type="radio" name="<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_inventaris"];?>
+<?php echo $_smarty_tpl->tpl_vars['ds']->value["kd_item"];?>
+supplierpilihan[]" class="cekbox col-lg-12" <?php if ($_smarty_tpl->tpl_vars['ds']->value['supplierpilihan']==$_smarty_tpl->tpl_vars['ds']->value['kd_supplier3']){?> checked <?php }?> value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_supplier3'];?>
+">
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="supplier3">Supplier 3</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="supplier3" name="supplier3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['kd_supplier3'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="nm_supplier3">Nama</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="nm_supplier3" name="nm_supplier3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['nm_supplier3']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="contact3">Contact</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="contact3" name="contact3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['contact3']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="lama_bayar3">Lama Bayar</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 " type="text" id="lama_bayar3" name="lama_bayar3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['lama_bayar3']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="harga3">Harga</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 amount" type="text" id="harga3" name="harga3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['harga3'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="harga_k3">Harga (k)</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8 amount" type="text" id="harga_k3" name="harga_k3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['harga_kecil3']->value;?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="keterangan_supplier3">Keterangan</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8" type="text" id="keterangan_supplier3" name="keterangan_supplier3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['keterangan_supplier3'];?>
+" disabled>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 control-label" for="file_supplier3">File</label><span class="col-lg-1" style="text-align: right">:</span>
+                            <input class="col-lg-8" type="text" id="file_supplier3" name="file_supplier3" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['ds']->value['file_supplier3'];?>
+" disabled>
+                        </div>
+                    </div>
+				</div>
+                <div class="row"></div><br>
+                <hr><hr>
+            </div>
+                <?php $_smarty_tpl->tpl_vars["nourut"] = new Smarty_variable($_smarty_tpl->tpl_vars['nourut']->value+1, null, 0);?>
+                <?php } ?>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

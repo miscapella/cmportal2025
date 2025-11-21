@@ -1,0 +1,159 @@
+<?php /* Smarty version Smarty-3.1.13, created on 2024-08-26 16:01:18
+         compiled from "ui\theme\softhash\prog\GAS\add-pr.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:6488812366cc2cf79d4200-11959062%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'c2d6150ee6aee942bc732478ec85fc95a09d735b' => 
+    array (
+      0 => 'ui\\theme\\softhash\\prog\\GAS\\add-pr.tpl',
+      1 => 1724662877,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '6488812366cc2cf79d4200-11959062',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_66cc2cf7a10208_59615296',
+  'variables' => 
+  array (
+    'msg' => 0,
+    '_url' => 0,
+    'idate' => 0,
+    'urlist' => 0,
+    'd' => 0,
+    'clist' => 0,
+    'paginator' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_66cc2cf7a10208_59615296')) {function content_66cc2cf7a10208_59615296($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php if ($_smarty_tpl->tpl_vars['msg']->value!=''){?>
+<div class="alert alert-success fade in">
+	<button class="close" data-dismiss="alert">
+		×
+	</button>
+	<i class="fa-fw fa fa-check"></i>
+	<?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+
+</div>
+<?php }?>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3>TAMBAH PURCHASE REQUISITION</h3>
+				<div class="alert alert-danger" id="emsg">
+					<a href="#"><i class="fal fa-times" style="float:right" id="closeMsg"></i></a>
+					<span id="emsgbody"></span>
+				</div>
+<!--
+                <div class="ibox-tools">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+pembelian/list-pr/" class="btn btn-primary btn-sm">Daftar PR</a>
+				</div>
+-->
+                <ul style="padding: 0;list-style-type:none">
+                   <li><button class="btn btn-success btn-sm" name="add" id="add"><i class="fa fa-plus"></i> Tambah Item</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger btn-sm" name="save" id="save">Simpan</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="form-group"><label class="col-lg-3 control-label" for="tgl_pr">Tanggal PR</label>
+					<div class="col-lg-3"><input style="background-color: #ccc;" type="text" id="idate" name="idate" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['idate']->value;?>
+" datepicker data-date-format="dd-mm-yyyy" data-auto-close="true" disabled>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body" style="overflow:auto;white-space:nowrap;">
+                <form class="form-horizontal" id="rform">
+					<div class="form-group">
+                        <label class="col-lg-1 control-label" for="referensi_ur1">Referensi UR</label>
+                        <div class="col-lg-3">
+                            <select class="form-control rolegroup urlist" id="referensi_url" name="referensi_url"><?php echo $_smarty_tpl->tpl_vars['urlist']->value;?>
+</select>
+                        </div>
+						<button class="btn btn-success btn-sm" name="add-ur" id="add-ur"><i class="fa fa-plus"></i> Tambah UR</button>
+                    </div>
+					<input type="hidden" name="kd_inventaris" id="kd_inventaris" value="<?php echo $_smarty_tpl->tpl_vars['d']->value['kd_inventaris'];?>
+">
+					<table class="table table-bordered table-hover sys_table">
+						<thead>
+						<tr>
+							<th style="width:2%">#</th>
+							<th><span style="color: red;">*</span> Nama Barang</th>
+							<th><span style="color: red;">*</span> Keperluan</th>
+							<th><span style="color: red;">*</span> Item Stock</th>
+							<th>Merk</th>
+							<th>Tipe</th>
+							<th>Spesifikasi</th>
+							<th><span style="color: red;">*</span> Qty Req</th>
+							<th><span style="color: red;">*</span> Tgl Diperlukan</th>
+							<th>Keterangan Pembelian</th>
+						</tr>
+						</thead>
+						<tbody>
+							<div style="display:none" name="opt" id="opt"><?php echo $_smarty_tpl->tpl_vars['clist']->value;?>
+</div>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body" style="overflow:auto;white-space:nowrap;">
+                <form class="form-horizontal" id="rform">
+					<table class="table table-bordered table-hover sys_table">
+						<thead>
+							<tr>
+								<th style="width:2%">#</th>
+								<th><span style="color: red;">*</span> Supplier 1</th>
+								<th><span style="color: red;">*</span> Harga Supplier 1</th>
+								<th>Keterangan Supplier 1</th>
+								<th>File Supplier 1</th></br>
+								<th>Supplier 2</th>
+								<th>Harga Supplier 2</th>
+								<th>Keterangan Supplier 2</th>
+								<th>File Supplier 2</th>
+							</br>
+								<th>Supplier 3</th>
+								<th>Harga Supplier 3</th>
+								<th>Keterangan Supplier 3</th>
+								<th>File Supplier 3</th>
+								<th><span style="color: red;">*</span> Supplier Pilihan</th>
+							</tr>
+						</thead>
+					</table>
+				</form>
+			</div>	
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <?php echo $_smarty_tpl->tpl_vars['paginator']->value['contents'];?>
+
+    </div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate ("sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>
